@@ -3,7 +3,6 @@
   %tr
     %th User
     %th Title
-    %th Body
     %th Confidence score
     %th
     %th
@@ -12,7 +11,6 @@
     %tr
       %td= lesson.user_id
       %td= lesson.title
-      %td= lesson.body
       %td= lesson.confidence_score
       %td= link_to 'Show', lesson
       %td= link_to 'Edit', edit_lesson_path(lesson)

@@ -7,7 +7,7 @@
   = @lesson.title
 %p
   %b Body:
-  = @lesson.body
+  = simple_format(@lesson.body)
 %p
   %b Confidence score:
   = @lesson.confidence_score

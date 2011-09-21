@@ -8,3 +8,7 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 
 gem 'haml'
+
+group :development do
+  gem 'heroku'
+end
