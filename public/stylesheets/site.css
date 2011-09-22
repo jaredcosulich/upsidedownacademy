@@ -110,6 +110,12 @@ p {
   text-align: center;
   padding-bottom: 24px; }
 
-.why {
+.why, .explore {
   float: right;
   width: 300px; }
+
+.explore {
+  clear: right;
+  padding-top: 24px; }
+  .explore li {
+    padding-bottom: 6px; }
