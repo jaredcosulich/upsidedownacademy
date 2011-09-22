@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %title ∩pside Down ∀cademy
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+  %body
+    = render "layouts/header"
+    = render "layouts/search"
+
+    #goal
+      The Goal: To make it easier for the next person to
+      learn what ever you are learning right now.
+
+    = yield

@@ -8,6 +8,9 @@ gem 'rails', '3.0.5'
 gem 'sqlite3'
 
 gem 'haml'
+gem 'sass'
+gem "newrelic_rpm"
+
 
 group :development do
   gem 'heroku'

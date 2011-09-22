@@ -1,0 +1,115 @@
+body {
+  font-size: 11pt;
+  font-family: verdana, arial, helvetica, sans-serif;
+  padding: 0;
+  margin: 0 auto;
+  color: #333333;
+  width: 1000px;
+  line-height: 1.25em; }
+
+h1 {
+  font-size: 25pt; }
+  h1 .upside_down {
+    font-size: 27pt; }
+
+h3 {
+  font-weight: normal;
+  font-size: 16pt; }
+
+h4 {
+  padding: 6px 0;
+  margin: 0; }
+
+ul, ol {
+  padding-top: 0;
+  margin-top: 0; }
+
+.small {
+  font-size: 9.5pt; }
+
+.really_small {
+  font-size: 8pt; }
+
+a {
+  color: black; }
+
+a:visited {
+  color: #666666; }
+
+a:hover {
+  color: white;
+  background-color: black; }
+
+p {
+  margin: 0;
+  padding: 6px 0; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #cc0000;
+  color: white; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+.text_left {
+  text-align: left; }
+
+.text_center {
+  text-align: center; }
+
+.text_right {
+  text-align: right; }
+
+#header {
+  border-bottom: 1px solid #333333;
+  overflow: hidden;
+  text-align: center; }
+  #header #logo {
+    float: left; }
+  #header #basic_navigation {
+    float: right;
+    padding-top: 1.5em;
+    line-height: 1.5em; }
+
+#search {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #333333; }
+
+#goal {
+  line-height: 3em;
+  text-align: center;
+  padding-bottom: 24px; }
+
+.why {
+  float: right;
+  width: 300px; }

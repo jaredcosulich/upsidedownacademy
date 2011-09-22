@@ -1,5 +1,5 @@
 Upsidedownacademy::Application.routes.draw do
-  root :to => "lessons#index"
+  root :to => "home#index"
 
   resources :lessons
 
