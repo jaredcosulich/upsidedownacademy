@@ -10,11 +10,11 @@
   .field
     %p= f.label :subject, "What subject or skill are you trying to learn?"
     = f.label :subject, "Subject:"
-    = f.text_field :subject
+    = f.text_field :subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
   .field
     %p= f.label :title, "What is the title of your tip / lesson?"    
     = f.label :title, "Title:"
-    = f.text_field :title
+    = f.text_field :title, "data-hint" => 'e.g. "Solving an equation" or "How to do the flip"'
   .field
     %p= f.label :confidence_score, "How confident are you at this subject / skill?"
     = f.select :confidence_score, Lesson::CONFIDENCE_SCORES
