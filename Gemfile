@@ -11,7 +11,12 @@ gem 'haml'
 gem 'sass'
 gem "newrelic_rpm"
 
+gem 'devise'
+gem 'pg'
+gem 'hoptoad_notifier'
 
 group :development do
   gem 'heroku'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end

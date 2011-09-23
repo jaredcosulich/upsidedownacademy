@@ -1,4 +1,5 @@
 class Lesson < ActiveRecord::Base
+  belongs_to :user
 
   CONFIDENCE_SCORES = [
     ["Just getting started, basically no idea what I'm doing.", 0],
