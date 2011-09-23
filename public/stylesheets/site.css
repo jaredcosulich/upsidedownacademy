@@ -93,6 +93,9 @@ p {
 .text_right {
   text-align: right; }
 
+form .field {
+  padding-bottom: 12px; }
+
 #header {
   border-bottom: 1px solid #333333;
   overflow: hidden;

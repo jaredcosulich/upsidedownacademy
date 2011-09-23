@@ -8,16 +8,18 @@
         - @lesson.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :title
-    %br/
+    %p= f.label :subject, "What subject or skill are you trying to learn?"
+    = f.label :subject, "Subject:"
+    = f.text_field :subject
+  .field
+    %p= f.label :title, "What is the title of your tip / lesson?"    
+    = f.label :title, "Title:"
     = f.text_field :title
   .field
-    = f.label :confidence_score, "How confident are you at this subject / skill?"
-    %br
+    %p= f.label :confidence_score, "How confident are you at this subject / skill?"
     = f.select :confidence_score, Lesson::CONFIDENCE_SCORES
   .field
-    = f.label :body
-    %br/
+    %p= f.label :body, "Your Tip / Lesson:"
     = f.text_area :body
   .actions
     = f.submit
