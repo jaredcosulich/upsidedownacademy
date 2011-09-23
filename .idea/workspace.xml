@@ -2,66 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/rails.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/integration/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/.gitkeep" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/upsidedownacademy.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/home/index.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_search.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.ru" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/boot.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/README_FOR_APP" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/422.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/rails" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/performance/browsing_test.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20110923224756_devise_create_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/upsidedownacademy.iml" afterPath="$PROJECT_DIR$/.idea/upsidedownacademy.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/lesson.rb" afterPath="$PROJECT_DIR$/app/models/lesson.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="upsidedownacademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,16 +39,52 @@
       <file leaf-file-name="application.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="2" selection-start="350" selection-end="350" vertical-scroll-proportion="-4.2222223">
+            <state line="6" column="2" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="29" selection-start="187" selection-end="187" vertical-scroll-proportion="0.3102041">
+            <state line="16" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="16" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20110923224756_devise_create_users.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20110923224756_devise_create_users.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lesson.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="18" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="26" selection-start="386" selection-end="386" vertical-scroll-proportion="0.79581153">
               <folding />
             </state>
           </provider>
@@ -139,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20110923154529_devise_create_users.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20110921185542_create_lessons.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/public/stylesheets/sass/site.sass" />
@@ -148,13 +134,14 @@
         <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.haml" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/lesson.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/_search.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/site.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/db/migrate/20110923224756_devise_create_users.rb" />
+        <option value="$PROJECT_DIR$/app/models/lesson.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -184,7 +171,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,187 +190,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="[gem] actionpack (v3.0.5, /Users/jaredcosulich/.rvm/gems/ruby-1.8.7-p299@ewd/gems/actionpack-3.0.5)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="[gem] actionpack (v3.0.5, /Users/jaredcosulich/.rvm/gems/ruby-1.8.7-p299@ewd/gems/actionpack-3.0.5)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action_view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="[gem] actionpack (v3.0.5, /Users/jaredcosulich/.rvm/gems/ruby-1.8.7-p299@ewd/gems/actionpack-3.0.5)" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="action_view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Ruby SDK 1.9.2-p0 [upsidedownacademy] &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Ruby SDK 1.9.2-p0 [upsidedownacademy] &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.9.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; Ruby SDK 1.9.2-p0 [upsidedownacademy] &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="1.9.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cgi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,7 +218,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,10 +237,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -448,10 +255,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lessons" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,28 +294,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="home" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -531,118 +312,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upsidedownacademy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RunManager" selected="Rake.db:migrate:redo">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -882,12 +565,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: upsidedownacademy" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: upsidedownacademy" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.db:migrate:redo" />
+      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
+      <item index="1" class="java.lang.String" itemvalue="Rake.db:migrate:redo" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Production: upsidedownacademy" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Development: upsidedownacademy" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -915,22 +598,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="656" y="416" width="1769" height="908" extended-state="0" />
+    <frame x="0" y="22" width="1440" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47420147" sideWeight="0.81203437" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4730769" sideWeight="0.81203437" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32923833" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20286533" sideWeight="0.67076164" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20268361" sideWeight="0.52692306" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34358975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -974,114 +657,94 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="395" selection-end="395" vertical-scroll-proportion="0.35752687">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="21" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.15322581">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="345" selection-end="345" vertical-scroll-proportion="-10.555555">
-          <folding />
-        </state>
+        <state line="52" column="21" selection-start="1261" selection-end="1261" vertical-scroll-proportion="0.15322581" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-12.37037">
-          <folding />
-        </state>
+        <state line="62" column="0" selection-start="1731" selection-end="1731" vertical-scroll-proportion="-12.37037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/application-7f3879792a49ea90ad41b7aafdc76eec.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.039832287">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.039832287" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.11632653">
-          <folding />
-        </state>
+        <state line="3" column="0" selection-start="178" selection-end="178" vertical-scroll-proportion="0.11632653" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="4" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.03877551">
-          <folding />
-        </state>
+        <state line="96" column="4" selection-start="1221" selection-end="1221" vertical-scroll-proportion="0.03877551" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_search.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.19387755">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="173" selection-end="173" vertical-scroll-proportion="0.19387755" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="307" selection-end="307" vertical-scroll-proportion="0.4265306">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="66" selection-start="508" selection-end="508" vertical-scroll-proportion="0.5040816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.46530613">
-          <folding />
-        </state>
+        <state line="11" column="21" selection-start="307" selection-end="307" vertical-scroll-proportion="0.4265306" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="2" selection-start="350" selection-end="350" vertical-scroll-proportion="-4.2222223">
+        <state line="6" column="2" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="29" selection-start="187" selection-end="187" vertical-scroll-proportion="0.3102041">
+        <state line="16" column="0" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20110923224756_devise_create_users.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="18" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="26" selection-start="386" selection-end="386" vertical-scroll-proportion="0.79581153">
           <folding />
         </state>
       </provider>

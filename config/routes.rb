@@ -1,4 +1,6 @@
 Upsidedownacademy::Application.routes.draw do
+  devise_for :users
+
   resources :lessons
 
   root :to => 'home#index'
