@@ -1,6 +1,8 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
 
+  scope :recent, order("created_at desc")
+
   CONFIDENCE_SCORES = [
     ["Just getting started, basically no idea what I'm doing.", 0],
     ["A little experience, I'm kind of figuring it out", 10],
@@ -12,4 +14,8 @@ class Lesson < ActiveRecord::Base
     ["Expert, I've been doing this for years. I won't lead you astray.", 70],
     ["Experts look up to me. I know this in and out.", 80]
   ]
+
+  def full_title
+    "#{subject}: #{title}"
+  end
 end

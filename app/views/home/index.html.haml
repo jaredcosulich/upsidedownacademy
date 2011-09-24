@@ -26,37 +26,40 @@
   %iframe{:width => "560", :height => "315", :src => "http://www.youtube.com/embed/9Ek61w1LxSc", :frameborder => "0", :allowfullscreen => "allowfullscreen"}
 
 .explore
-  %h2 Explore Tips / Lessons
+  %h3 Recent Tips / Lessons
   %table
     %tr
       %td
-        %h4 Browse Subjects
         %ul.small
-          %li
-            = link_to("K - 12", "")
-            &nbsp;->&nbsp;
-            = "#{link_to("Math", "")}, ".html_safe
-            = "#{link_to("English", "")}, ".html_safe
-            = link_to("more...", "")
-          %li
-            = link_to("College", "")
-            &nbsp;->&nbsp;
-            Coming soon...
-          %li
-            = link_to("Grad School", "")
-            &nbsp;->&nbsp;
-            Coming soon...
-          %li
-            = link_to("Professional", "")
-            &nbsp;->&nbsp;
-            Coming soon...
-          %li
-            = link_to("Life", "")
-            &nbsp;->&nbsp;
-            Coming soon...
-
-      %td
-        %h4 Popular Tips / Lessons
-
-      %td
-        %h4 Recent Tips / Lessons
+          - @lessons[0..4].each do |lesson|
+            %li= "#{link_to(lesson.full_title, lesson_path(lesson))} (#{link_to(lesson.user.display_name, profile_path(lesson.user))})".html_safe
+      -#
+        %td
+          %h4 Browse Subjects
+          %ul.small
+            %li
+              = link_to("K - 12", "")
+              &nbsp;->&nbsp;
+              = "#{link_to("Math", "")}, ".html_safe
+              = "#{link_to("English", "")}, ".html_safe
+              = link_to("more...", "")
+            %li
+              = link_to("College", "")
+              &nbsp;->&nbsp;
+              Coming soon...
+            %li
+              = link_to("Grad School", "")
+              &nbsp;->&nbsp;
+              Coming soon...
+            %li
+              = link_to("Professional", "")
+              &nbsp;->&nbsp;
+              Coming soon...
+            %li
+              = link_to("Life", "")
+              &nbsp;->&nbsp;
+              Coming soon...
+        %td
+          %h4 Popular Tips / Lessons
+        %td
+          %h4 Recent Tips / Lessons

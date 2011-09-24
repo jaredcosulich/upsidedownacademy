@@ -5,6 +5,7 @@ Upsidedownacademy::Application.routes.draw do
 
   root :to => 'home#index'
 
+  resources :profiles, :only => :show
   
 
   # The priority is based upon order of creation:
