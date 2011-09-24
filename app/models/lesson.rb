@@ -11,8 +11,8 @@ class Lesson < ActiveRecord::Base
     ["Feeling frustrated, I should be progressing better right now.", 40],
     ["Novice, I've got a long way to go, but I'm feeling comfortable.", 50],
     ["Solid experience, not an expert, but I know what I'm doing.", 60],
-    ["Expert, I've been doing this for years. I won't lead you astray.", 70],
-    ["Experts look up to me. I know this in and out.", 80]
+    ["Expert, I know this in and out.. I won't lead you astray.", 70],
+    ["Beyond an expert. Experts look up to me.", 80]
   ]
 
   def full_title

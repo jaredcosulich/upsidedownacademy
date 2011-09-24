@@ -1,3 +1,14 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$ ->
+  setDefault = (input)->
+    input = $(input)
+    input.val(input.attr("data-hint")) if input.val().length == 0
+    input.addClass("hinted") if input.val() == input.attr("data-hint")
+
+  $("input[data-hint]").focus ->
+    if $(this).val() == $(this).attr("data-hint")
+      $(this).val("")
+      $(this).removeClass("hinted")
+  .blur ->
+    setDefault(this)
+  .each ->
+    setDefault(this)

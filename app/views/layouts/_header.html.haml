@@ -1,9 +1,9 @@
 #header
   #logo
     %h1
-      = "<span class='upside_down'>∩</span>pside Down <span class='upside_down'>∀</span>cademy".html_safe
+      = link_to("<span class='upside_down'>∩</span>pside Down <span class='upside_down'>∀</span>cademy".html_safe, root_path)
 
-    %h2 Where the students do the teaching
+    %h2= link_to("Where the students do the teaching", root_path)
 
   #basic_navigation
     %p "The best way to learn is to try and teach."

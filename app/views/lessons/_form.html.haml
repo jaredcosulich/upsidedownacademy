@@ -7,19 +7,28 @@
       %ul
         - @lesson.errors.full_messages.each do |msg|
           %li= msg
+
   .field
-    %p= f.label :subject, "What subject or skill are you trying to learn?"
+    %p= f.label :subject, "What subject or skill are you trying to learn / teach?"
     = f.label :subject, "Subject:"
     = f.text_field :subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
+
   .field
-    %p= f.label :title, "What is the title of your tip / lesson?"    
+    %p= f.label :title, "What do you want to title your tip / lesson?"    
     = f.label :title, "Title:"
-    = f.text_field :title, "data-hint" => 'e.g. "Solving an equation" or "How to do the flip"'
+    = f.text_field :title, "data-hint" => 'e.g. "A simple equation" or "How to flip the egg"'
+
   .field
     %p= f.label :confidence_score, "How confident are you at this subject / skill?"
     = f.select :confidence_score, Lesson::CONFIDENCE_SCORES
+
   .field
     %p= f.label :body, "Your Tip / Lesson:"
+    .small
+      Even if you're doing a video lesson, please try to
+      %br
+      write out as much of your lesson as possible.
     = f.text_area :body
+
   .actions
     = f.submit
