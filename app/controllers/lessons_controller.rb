@@ -15,9 +15,13 @@ class LessonsController < ApplicationController
   def show
     @lesson = Lesson.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @lesson }
+    if @lesson.complete?
+      respond_to do |format|
+        format.html
+        format.json { render json: @lesson }
+      end
+    else
+      redirect_to edit_lesson_path(@lesson)
     end
   end
 
@@ -44,7 +48,7 @@ class LessonsController < ApplicationController
 
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
+        format.html { redirect_to edit_lesson_path(@lesson) }
         format.json { render json: @lesson, status: :created, location: @lesson }
       else
         format.html { render action: "new" }
