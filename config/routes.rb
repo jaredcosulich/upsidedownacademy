@@ -1,8 +1,10 @@
 Upsidedownacademy::Application.routes.draw do
   devise_for :users
 
-  resources :lessons
-
+  resources :lessons do
+    resources :videos
+  end
+  
   root :to => 'home#index'
 
   resources :profiles, :only => :show

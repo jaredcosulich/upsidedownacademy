@@ -29,4 +29,6 @@ Upsidedownacademy::Application.configure do
   config.assets.debug = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  YOUTUBE_DEVELOPER_KEY = "AI39si7ZmAOG9ra7FLHiK_pqIZ77Xp0IqOlHxAQXYNrG2PTKZiuzUL-fRmtjFCoJSb7WIjOAeJI3XGb_ikSxjaBq6Fep-gHT7A"
 end

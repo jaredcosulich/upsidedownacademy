@@ -59,4 +59,6 @@ Upsidedownacademy::Application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.default_url_options = { :host => 'www.upsidedownacademy.org' }
+
+  YOUTUBE_DEVELOPER_KEY = "AI39si7ZmAOG9ra7FLHiK_pqIZ77Xp0IqOlHxAQXYNrG2PTKZiuzUL-fRmtjFCoJSb7WIjOAeJI3XGb_ikSxjaBq6Fep-gHT7A"
 end
