@@ -6,14 +6,15 @@ class YouTube
     response.split(/\n/).last.gsub("Auth=", "")
   end
 
-  def self.post_video_info(lesson, lesson_url)
+  def self.post_video_info(video, lesson_url)
+    lesson = video.lesson
     post_body = <<-xml_data
 <?xml version="1.0"?>
 <entry xmlns="http://www.w3.org/2005/Atom"
 xmlns:media="http://search.yahoo.com/mrss/"
 xmlns:yt="http://gdata.youtube.com/schemas/2007">
 <media:group>
-<media:title type="plain">Lesson: #{lesson.full_title}</media:title>
+<media:title type="plain">Lesson: #{video.title || lesson.full_title}</media:title>
 <media:description type="plain">
 This video is a component of the lesson, "#{lesson.full_title}". The full lesson can be found on UpsideDownAcademy.org - #{lesson_url}.
 </media:description>

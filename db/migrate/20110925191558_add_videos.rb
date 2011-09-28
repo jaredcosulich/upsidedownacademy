@@ -3,6 +3,7 @@ class AddVideos < ActiveRecord::Migration
 
     create_table :videos do |t|
       t.integer :lesson_id
+      t.string :title
       t.string :caption
       t.string :youtube_id
     end
