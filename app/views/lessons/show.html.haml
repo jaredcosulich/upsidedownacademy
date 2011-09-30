@@ -1,16 +1,18 @@
 %p#notice= notice
+
+%h2= @lesson.full_title
 %p
-  %b User:
-  = @lesson.user_id
+  Created by:
+  = @lesson.user.display_name
 %p
-  %b Title:
-  = @lesson.title
-%p
-  %b Body:
-  = simple_format(@lesson.body)
-%p
-  %b Confidence score:
-  = @lesson.confidence_score
+  = "#{@lesson.user.display_name}'s"
+  confidence with
+  = "#{@lesson.subject.downcase}:"
+  %br
+  = @lesson.confidence_text
+
+= simple_format(@lesson.body)
+
 = link_to 'Edit', edit_lesson_path(@lesson)
 |
 #{link_to 'Back', lessons_path}

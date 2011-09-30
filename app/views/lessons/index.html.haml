@@ -2,6 +2,7 @@
 %table
   %tr
     %th User
+    %th Subject
     %th Title
     %th Confidence score
     %th
@@ -9,7 +10,8 @@
     %th
   - @lessons.each do |lesson|
     %tr
-      %td= lesson.user_id
+      %td= lesson.user.display_name
+      %td= lesson.subject
       %td= lesson.title
       %td= lesson.confidence_score
       %td= link_to 'Show', lesson

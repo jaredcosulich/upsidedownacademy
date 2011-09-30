@@ -24,7 +24,7 @@ describe LessonsController do
   # Lesson. As you add validations to Lesson, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:subject => "A Subject", :title => "A Title", :confidence_score => "10", :body => "Lesson Text"}
   end
 
   describe "GET index" do
@@ -40,6 +40,12 @@ describe LessonsController do
       lesson = Lesson.create! valid_attributes
       get :show, :id => lesson.id.to_s
       assigns(:lesson).should eq(lesson)
+    end
+
+    it "redirects to edit/lesson if lesson is not complete" do
+      lesson = Lesson.create! valid_attributes.merge(:confidence_score => nil)
+      get :show, :id => lesson.id.to_s
+      response.should redirect_to(edit_lesson_path(lesson))
     end
   end
 
@@ -59,6 +65,13 @@ describe LessonsController do
   end
 
   describe "POST create" do
+    describe "through the wizard" do
+      it "should redirect to edit/lesson until all info is filled in" do
+        post :create, :lesson => {:subject => "A Subject"}
+        response.should redirect_to(edit_lesson_path(Lesson.last))
+      end
+    end
+
     describe "with valid params" do
       it "creates a new Lesson" do
         expect {
@@ -70,11 +83,6 @@ describe LessonsController do
         post :create, :lesson => valid_attributes
         assigns(:lesson).should be_a(Lesson)
         assigns(:lesson).should be_persisted
-      end
-
-      it "redirects to the created lesson" do
-        post :create, :lesson => valid_attributes
-        response.should redirect_to(Lesson.last)
       end
     end
 
