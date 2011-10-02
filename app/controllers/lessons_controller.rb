@@ -1,4 +1,6 @@
 class LessonsController < ApplicationController
+
+
   # GET /lessons
   # GET /lessons.json
   def index
@@ -44,10 +46,15 @@ class LessonsController < ApplicationController
   # POST /lessons
   # POST /lessons.json
   def create
+    params[:lesson].merge!(:user => current_user) if user_signed_in?
     @lesson = Lesson.new(params[:lesson])
 
     respond_to do |format|
       if @lesson.save
+        if @lesson.user.nil?
+          unclaimed = (cookies["unclaimed_lessons"] || "").split(",")
+          cookies["unclaimed_lessons"] = unclaimed.push(@lesson.id).join(",")
+        end
         format.html { redirect_to edit_lesson_path(@lesson) }
         format.json { render json: @lesson, status: :created, location: @lesson }
       else

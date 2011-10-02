@@ -72,6 +72,24 @@ describe LessonsController do
       end
     end
 
+    describe "current_user flows" do
+      it "should set a cookie if the current_user doesn't exist" do
+        post :create, :lesson => {:subject => "A Subject"}
+        lesson = Lesson.last
+        lesson.user.should be_nil
+        response.cookies["unclaimed_lessons"].should == lesson.id.to_s
+      end
+
+      it "should assign the current_user to the lesson" do
+        user = Factory(:user)
+        sign_in(user)
+        post :create, :lesson => {:subject => "A Subject"}
+        lesson = Lesson.last
+        lesson.user.should == user
+        response.cookies["unclaimed_lessons"].should be_nil
+      end
+    end
+
     describe "with valid params" do
       it "creates a new Lesson" do
         expect {
