@@ -1,5 +1,6 @@
 class VideosController < ApplicationController
   before_filter :load_lesson
+  layout false
 
   # GET /videos/1
   # GET /videos/1.json
@@ -16,7 +17,6 @@ class VideosController < ApplicationController
   # GET /videos/new.json
   def new
     @video = Video.new(:lesson => @lesson)
-    @form_info = @video.setup_youtube(url_for(@lesson))
 
     respond_to do |format|
       format.html # new.html.erb
@@ -32,17 +32,28 @@ class VideosController < ApplicationController
   # POST /videos
   # POST /videos.json
   def create
-    @video = Video.new(params[:video])
+    @video = Video.new(params[:video].merge(:lesson => @lesson))
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Video was successfully created.' }
+        format.html { redirect_to upload_lesson_video_path(@lesson, @video) }
         format.json { render json: @video, status: :created, location: @video }
       else
         format.html { render action: "new" }
         format.json { render json: @video.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def upload
+    @video = Video.find(params[:id])
+    @form_info = @video.setup_youtube(url_for(@lesson))
+  end
+
+  def assign_youtube_id
+    @video = Video.find(params[:video_id])
+    @video.update_attributes(:youtube_id => params[:id])
+    render "layouts/close_window"
   end
 
   # PUT /videos/1

@@ -1,0 +1,5 @@
+%h2= @video.title
+
+%iframe{:width => "720", :height => "450", :src => "http://www.youtube.com/embed/#{@video.youtube_id}", :frameborder => "0", :allowfullscreen => "allowfullscreen"}
+
+= simple_format(@video.caption)

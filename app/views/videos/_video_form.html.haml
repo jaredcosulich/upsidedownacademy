@@ -1,0 +1,21 @@
+:javascript
+  $(function() {
+    this.checkForFile = function() {
+      if ($('#file').value) {
+        return true;
+      }
+      $('#errMsg').style.display = '';
+      return false;
+    }
+
+
+    $(form).submit(this.checkForFile);
+  })
+
+= form_for :video, :url => @form_info["url"] + "?nexturl=#{url_for(assign_youtube_id_path(:video_id => @video.id, :only_path => false))}", :html => {:enctype => "multipart/form-data"} do |f|
+  %input{:id => "file", :type => "file", :name => "file"}
+  #errMsg{:style => "display: none; color: red;"}
+    You need to specify a file.
+
+  = hidden_field_tag("token", @form_info["token"])
+  = submit_tag("Upload Video")

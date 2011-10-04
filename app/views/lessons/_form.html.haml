@@ -94,7 +94,12 @@
         %h3 Videos
         - if @lesson.videos.empty?
           %p You haven't yet added an videos to your lesson.
-          %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson))
+          %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
+        - @lesson.videos.each do |video|
+          .video_thumbnail
+            = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
+            = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
+            .small= simple_format(truncate(video.title, :length => 90))
 
     .field
       %h3 Last Step: Your Tip / Lesson
@@ -105,7 +110,7 @@
       = f.text_area :body
 
     .add
-      %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson))
+      %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
 
 
   .actions
