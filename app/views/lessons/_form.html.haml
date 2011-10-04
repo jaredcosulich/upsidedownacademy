@@ -9,37 +9,102 @@
           %li= msg
 
   - if @lesson.subject.blank? || params.include?(:edit_subject)
+    .right.example_lesson_info
+      %h3 Example Subjects / Skills
+      %p You can try to teach any subject or skill.
+      %p Some examples:
+      %ul
+        %li Algebra
+        %li Frying an egg
+        %li Hitting a baseball
+        %li Grammar
+        %li Salsa dancing
+        %li Speed reading
+        %li Chemistry
+        %li etc   
+
     .field
+      %h3 Step 1 (of 4): Lesson Subject
       %p= f.label :subject, "What subject or skill are you trying to learn / teach?"
-      = f.label :subject, "Subject:"
-      = f.text_field :subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
+      %p
+        = f.label :subject, "Subject:"
+        = f.text_field :subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
 
   - elsif @lesson.confidence_score.blank? || params.include?(:edit_confidence)
+    .right.example_lesson_info
+      %h3 Confidence Level
+      %p
+        It doesn't matter if you're a complete novice at
+        = "\"#{@lesson.subject.downcase}\""
+        or an expert.
+      %p.small (we actually prefer to get lessons from people who are just starting out, but we appreciate experts as well)
+      %p Just try to be honest about your skill level so others will understand where you're at. 
+
     .field
+      %h3 Step 2 (of 4): Confidence Level
       %p= f.label :confidence_score, "How confident are you at this subject / skill?"
-      = f.select :confidence_score, Lesson::CONFIDENCE_SCORES
+      %p= f.select :confidence_score, Lesson::CONFIDENCE_SCORES
 
   - elsif @lesson.title.blank? || params.include?(:edit_title)
+    .right.example_lesson_info
+      %h3 Lesson Title
+      %p It's best to create lessons that are short.
+      %p Try to break down your subject in to pieces so that you can teach them in smaller lessons.
+      %p Some examples:
+      %ul
+        %li
+          %p
+            Subject: Algebra
+            %br
+            Title:
+            %b Solving a simple equation
+        %li
+          %p
+            Subject: Frying an egg
+            %br
+            Title:
+            %b How to flip the egg
+        %li
+          %p
+            Subject: Grammar
+            %br
+            Title:
+            %b How to use commas
+        %li
+          %p
+            Subject: Golf
+            %br
+            Title:
+            %b How to put backspin on the ball
+
     .field
+      %h3 Step 3 (of 4): Lesson Title
       %p= f.label :title, "What do you want to title your tip / lesson?"
-      = f.label :title, "Title:"
-      = f.text_field :title, "data-hint" => 'e.g. "A simple equation" or "How to flip the egg"'
+      %p
+        = f.label :title, "Title:"
+        = f.text_field :title, "data-hint" => 'e.g. "How to flip the egg"'
       
   - else
+    .right.example_lesson_info
+      %h3 Your Tip / Lesson
+      %p Please try to write out as much of your lesson as possible.
+      %p It's easier for people to search text.
+
     .field
-      %p= f.label :body, "Your Tip / Lesson:"
+      %h3 Last Step: Your Tip / Lesson
       .small
         Even if you're doing a video lesson, please try to
         %br
         write out as much of your lesson as possible.
       = f.text_area :body
-    
+
     .add
-      = link_to("Add A Video To Your Tip / Lesson", new_lesson_video_path(@lesson))
+      %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson))
+      %p= link_to("Add a photo to your lesson", new_lesson_video_path(@lesson))
 
 
   .actions
-    = f.submit
+    = f.submit "Save Lesson"
 
 = render "devise/registrations/short_form" if current_user.nil?
 
