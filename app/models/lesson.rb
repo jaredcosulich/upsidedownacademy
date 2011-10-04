@@ -1,5 +1,6 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
+  has_many :videos
 
   scope :recent, order("created_at desc")
 
@@ -28,5 +29,9 @@ class Lesson < ActiveRecord::Base
   def confidence_text
     score = CONFIDENCE_SCORES.detect { |score_info| score_info[1] == confidence_score }
     score.nil? ? "" : "#{score[1]}: #{score[0]}"
+  end
+
+  def to_param
+    "#{id}_#{subject.sluggify}_#{title.sluggify}".downcase
   end
 end

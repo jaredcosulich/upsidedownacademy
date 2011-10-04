@@ -22,6 +22,7 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'devise'
 gem 'pg'
+gem 'sluggable'
 
 
 # Use unicorn as the web server

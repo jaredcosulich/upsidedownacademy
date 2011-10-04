@@ -85,10 +85,16 @@
         = f.text_field :title, "data-hint" => 'e.g. "How to flip the egg"'
       
   - else
-    .right.example_lesson_info
-      %h3 Your Tip / Lesson
-      %p Please try to write out as much of your lesson as possible.
-      %p It's easier for people to search text.
+    .right
+      .example_lesson_info
+        %h3 Your Tip / Lesson
+        %p Please try to write out as much of your lesson as possible.
+        %p It's easier for people to search text.
+      .photos_and_videos
+        %h3 Videos
+        - if @lesson.videos.empty?
+          %p You haven't yet added an videos to your lesson.
+          %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson))
 
     .field
       %h3 Last Step: Your Tip / Lesson
@@ -100,7 +106,6 @@
 
     .add
       %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson))
-      %p= link_to("Add a photo to your lesson", new_lesson_video_path(@lesson))
 
 
   .actions
