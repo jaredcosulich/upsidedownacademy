@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/b.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/bl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/br.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/closelabel.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/tl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox/tr.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_lightbox.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videos/_video_form.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videos/show.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/videos/upload.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/facebox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-8a50feed8d29566738ad005e19fe1c2d.min.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-8a50feed8d29566738ad005e19fe1c2d.min.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js.gz" afterPath="$PROJECT_DIR$/public/assets/jquery-ui-7e33882a28fc84ad0e0e47e46cbf901c.min.js.gz" />
+    <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="- missing assets">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20111004180150_add_published_flag.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/lesson.rb" afterPath="$PROJECT_DIR$/app/models/lesson.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/_short_form.html.haml" afterPath="$PROJECT_DIR$/app/views/devise/registrations/_short_form.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/videos/_form.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/new.html.haml" afterPath="$PROJECT_DIR$/app/views/videos/new.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/edit.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/edit.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/new.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/new.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="upsidedownacademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,19 +39,19 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_video_form.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/videos/_video_form.html.haml">
+      <file leaf-file-name="20111004180150_add_published_flag.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20111004180150_add_published_flag.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="133" selection-start="370" selection-end="370" vertical-scroll-proportion="-9.851851">
+            <state line="11" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="-7.740741">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.haml">
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="6" column="34" selection-start="134" selection-end="134" vertical-scroll-proportion="-4.2222223">
               <folding />
             </state>
           </provider>
@@ -70,7 +60,61 @@
       <file leaf-file-name="_form.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="42" selection-start="3508" selection-end="3508" vertical-scroll-proportion="-15.777778">
+            <state line="118" column="37" selection-start="3945" selection-end="3945" vertical-scroll-proportion="-20.407408">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_short_form.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/_short_form.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lesson.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="51" selection-start="166" selection-end="166" vertical-scroll-proportion="-3.5185184">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.css.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="140" column="20" selection-start="1953" selection-end="1953" vertical-scroll-proportion="-15.962963">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/lessons/new.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="26" selection-start="404" selection-end="404" vertical-scroll-proportion="-6.3333335">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="29" selection-start="454" selection-end="454" vertical-scroll-proportion="-14.074074">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="21" selection-start="435" selection-end="435" vertical-scroll-proportion="0.46130502">
               <folding />
             </state>
           </provider>
@@ -79,61 +123,7 @@
       <file leaf-file-name="lessons.css.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="14" selection-start="530" selection-end="530" vertical-scroll-proportion="-16.88889">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="url_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0@upsidedownacademy/gems/actionpack-3.1.0/lib/action_view/helpers/url_helper.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="78" selection-start="3376" selection-end="3385" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videos_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/videos_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="-4.2222223">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="39" selection-start="58" selection-end="58" vertical-scroll-proportion="0.05882353">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/schema.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.074074">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="94" selection-start="124" selection-end="141" vertical-scroll-proportion="-1.4074074">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="upload.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/videos/upload.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="16" selection-start="172" selection-end="172" vertical-scroll-proportion="-2.8148148">
+            <state line="5" column="21" selection-start="212" selection-end="212" vertical-scroll-proportion="-3.5185184">
               <folding />
             </state>
           </provider>
@@ -175,22 +165,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/_lightbox.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/facebox.css.sass" />
-        <option value="$PROJECT_DIR$/public/assets/facebox.js" />
-        <option value="$PROJECT_DIR$/public/assets/facebox.css" />
-        <option value="$PROJECT_DIR$/app/views/videos/new.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/videos/upload_video.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/videos/upload.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" />
-        <option value="$PROJECT_DIR$/app/views/videos/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/videos/_video_form.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" />
-        <option value="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/videos/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/lessons/edit.html.haml" />
+        <option value="$PROJECT_DIR$/app/controllers/home_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/lesson.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20111004180150_add_published_flag.rb" />
+        <option value="$PROJECT_DIR$/config/database.yml" />
+        <option value="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/_short_form.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/lessons/new.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.haml" />
       </list>
     </option>
   </component>
@@ -496,6 +486,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -581,6 +589,76 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registrations" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -711,39 +789,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Rake.routes">
-    <configuration default="false" name="new.html.haml_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="upsidedownacademy" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="RAILS_ENV" value="test" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="true" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
-        <COVERAGE_PATTERN ENABLED="true">
-          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
-        </COVERAGE_PATTERN>
-      </EXTENSION>
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/views/lessons/new.html.haml_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Rake.db:migrate">
     <configuration default="false" name="edit.html.haml_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="upsidedownacademy" />
@@ -860,6 +906,32 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="upsidedownacademy" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="RAILS_ENV" value="development" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:migrate" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -1080,11 +1152,11 @@
       <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Production: upsidedownacademy" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Development: upsidedownacademy" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.new.html.haml_spec" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.edit.html.haml_spec" />
-      <item index="6" class="java.lang.String" itemvalue="RSpec.index.html.haml_spec" />
-      <item index="7" class="java.lang.String" itemvalue="Rake.routes" />
-      <item index="8" class="java.lang.String" itemvalue="RSpec.lessons_controller_spec" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.edit.html.haml_spec" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.index.html.haml_spec" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="7" class="java.lang.String" itemvalue="RSpec.lessons_controller_spec" />
+      <item index="8" class="java.lang.String" itemvalue="Rake.db:migrate" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -1148,7 +1220,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="5" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- tweaking header&#10;- making lesson urls sluggable" />
+    <option name="LAST_COMMIT_MESSAGE" value="- missing assets" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1177,119 +1249,121 @@
     <MESSAGE value="- working on lesson creation flow" />
     <MESSAGE value="- fixing view specs" />
     <MESSAGE value="- tweaking header&#10;- making lesson urls sluggable" />
+    <MESSAGE value="- facebox&#10;- adding videos flow" />
+    <MESSAGE value="- missing assets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="876" selection-end="876" vertical-scroll-proportion="-25.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/new.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="85" selection-end="85" vertical-scroll-proportion="-1.4074074">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/youtube.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="377" selection-end="377" vertical-scroll-proportion="-5.6296296">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/video.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="108" selection-end="108" vertical-scroll-proportion="-2.8148148">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="495" selection-end="495" vertical-scroll-proportion="-13.37037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="0" selection-start="1260" selection-end="1260" vertical-scroll-proportion="-12.444445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.074074">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="94" selection-start="124" selection-end="141" vertical-scroll-proportion="-1.4074074">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/upload.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="16" selection-start="172" selection-end="172" vertical-scroll-proportion="-2.8148148">
+        <state line="2" column="39" selection-start="58" selection-end="58" vertical-scroll-proportion="0.05882353">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.2-p0@upsidedownacademy/gems/actionpack-3.1.0/lib/action_view/helpers/url_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="78" selection-start="3376" selection-end="3385" vertical-scroll-proportion="0.0">
+        <state line="69" column="78" selection-start="3376" selection-end="3385" vertical-scroll-proportion="0.27637443">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/_video_form.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/edit.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="133" selection-start="370" selection-end="370" vertical-scroll-proportion="-9.851851">
+        <state line="1" column="15" selection-start="48" selection-end="48" vertical-scroll-proportion="-0.7037037">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.haml">
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/videos_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="133" selection-end="133" vertical-scroll-proportion="-4.2222223">
+        <state line="14" column="3" selection-start="501" selection-end="501" vertical-scroll-proportion="-2.1111112">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
+    <entry file="file://$PROJECT_DIR$/app/controllers/home_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="14" selection-start="530" selection-end="530" vertical-scroll-proportion="-16.88889">
+        <state line="3" column="32" selection-start="90" selection-end="90" vertical-scroll-proportion="-2.1111112">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="51" selection-start="166" selection-end="166" vertical-scroll-proportion="-3.5185184">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111004180150_add_published_flag.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="26" selection-start="173" selection-end="173" vertical-scroll-proportion="-7.740741">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="34" selection-start="134" selection-end="134" vertical-scroll-proportion="-4.2222223">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="42" selection-start="3508" selection-end="3508" vertical-scroll-proportion="-15.777778">
+        <state line="118" column="37" selection-start="3945" selection-end="3945" vertical-scroll-proportion="-20.407408">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.haml">
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/_short_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="39" selection-start="58" selection-end="58" vertical-scroll-proportion="0.05882353">
+        <state line="0" column="26" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="21" selection-start="212" selection-end="212" vertical-scroll-proportion="-3.5185184">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="454" selection-end="454" vertical-scroll-proportion="-14.074074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/new.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="404" selection-end="404" vertical-scroll-proportion="-6.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="20" selection-start="1953" selection-end="1953" vertical-scroll-proportion="-15.962963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="21" selection-start="435" selection-end="435" vertical-scroll-proportion="0.46130502">
           <folding />
         </state>
       </provider>

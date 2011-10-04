@@ -3,6 +3,7 @@ class Lesson < ActiveRecord::Base
   has_many :videos
 
   scope :recent, order("created_at desc")
+  scope :published, where("published_at is not null")
 
   CONFIDENCE_SCORES = [
     ["Just getting started, basically no idea what I'm doing.", 0],

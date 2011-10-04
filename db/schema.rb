@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925191558) do
+ActiveRecord::Schema.define(:version => 20111004180150) do
 
   create_table "lessons", :force => true do |t|
     t.integer  "user_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20110925191558) do
     t.integer  "confidence_score"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.date     "published_at"
   end
 
   create_table "users", :force => true do |t|
