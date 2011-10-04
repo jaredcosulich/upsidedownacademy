@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @resource.title
+%p
+  %b Url:
+  = @resource.url
+%p
+  %b Comments:
+  = @resource.comments
+= link_to 'Edit', edit_resource_path(@resource)
+|
+\#{link_to 'Back', resources_path}

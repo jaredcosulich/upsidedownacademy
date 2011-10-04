@@ -79,7 +79,7 @@
 
     .field
       %h3 Step 3 (of 4): Lesson Title
-      %p= f.label :title, "What do you want to title your tip / lesson?"
+      %p= f.label :title, "What do you want to title your lesson?"
       %p
         = f.label :title, "Title:"
         = f.text_field :title, "data-hint" => 'e.g. "How to flip the egg"'
@@ -87,13 +87,13 @@
   - else
     .right
       .example_lesson_info
-        %h3 Your Tip / Lesson
-        %p Please try to write out as much of your lesson as possible.
-        %p It's easier for people to search text.
+        %h3 Your Lesson
+        %p Please try to write out as much of your lesson as possible, even if you're including a video.
+        %p It's easier for people to search text than to search/scan through a video.
       .photos_and_videos
         %h3 Videos
         - if @lesson.videos.empty?
-          %p You haven't yet added an videos to your lesson.
+          %p.small You haven't yet added any videos to your lesson.
           %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
         - @lesson.videos.each do |video|
           .video_thumbnail
@@ -101,8 +101,22 @@
             = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
             .small= simple_format(truncate(video.title, :length => 90))
 
+        %br
+
+        %h3 Resources
+        - if @lesson.videos.empty?
+          .small
+            %p You haven't yet added any resource for your lesson.
+            %p What resources did you find helpful when you were learning what you are now teaching?
+          %p= link_to("Add a resource for your lesson", new_lesson_resource_path(@lesson), :class => "lightbox")
+        - @lesson.videos.each do |video|
+          .video_thumbnail
+            = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
+            = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
+            .small= simple_format(truncate(video.title, :length => 90))
+
     .field
-      %h3 Last Step: Your Tip / Lesson
+      %h3 Last Step: Your Lesson
       .small
         Even if you're doing a video lesson, please try to
         %br
@@ -111,9 +125,10 @@
 
     .add
       %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
+      %p= link_to("Add a resource for your lesson", new_lesson_resource_path(@lesson), :class => "lightbox")
 
 
   .actions
-    = f.submit "Save Lesson"
+    %p= f.submit "Save Lesson"
 
 = render "devise/registrations/short_form" if current_user.nil?
