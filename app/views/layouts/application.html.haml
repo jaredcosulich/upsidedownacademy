@@ -9,12 +9,13 @@
     
   %body
     = render "layouts/header"
-    = render "layouts/search"
+    #content_container
+      #goal
+        %h2 The Goal:
+        Make it easier / more fun for the next person to
+        learn what ever you are learning right now.
 
-    %h3#goal{:style => "clear: both;"}
-      The Goal: Make it easier / more fun for the next person to
-      learn what ever you are learning right now.
+      #content
+        = yield
 
-    = yield
-
-    = render "layouts/footer"
+        = render "layouts/footer"
