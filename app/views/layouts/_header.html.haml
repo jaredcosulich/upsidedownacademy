@@ -1,11 +1,7 @@
 #header
   #header_content
     #logo
-      = image_tag("flag_logo.png")
-      -#
-        %h1
-          = link_to("<span class='upside_down'>∩</span>pside Down <span class='upside_down'>∀</span>cademy".html_safe, root_path)
-        %h2= link_to("Where the students do the teaching", root_path)
+      = link_to(image_tag("flag_logo.png"), root_path)
 
     #basic_navigation
       #site_quote "The best way to learn is to try and teach."
