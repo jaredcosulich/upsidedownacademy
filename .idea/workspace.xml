@@ -1007,7 +1007,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="5" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- sign in / registration flow" />
+    <option name="LAST_COMMIT_MESSAGE" value="- my lessons" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1042,6 +1042,7 @@
     <MESSAGE value="- adding resources" />
     <MESSAGE value="- working on videos flow" />
     <MESSAGE value="- sign in / registration flow" />
+    <MESSAGE value="- my lessons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
