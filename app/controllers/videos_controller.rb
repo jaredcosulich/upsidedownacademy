@@ -52,8 +52,15 @@ class VideosController < ApplicationController
 
   def assign_youtube_id
     @video = Video.find(params[:video_id])
-    @video.update_attributes(:youtube_id => params[:id])
-    render "layouts/close_window"
+    if params[:status].to_i == 200
+      @video.update_attributes(:youtube_id => params[:id])
+      render "layouts/close_window" and return
+    elsif params[:status].to_i == 503
+      flash[:notice] = "Your video was not uploaded. The YouTube service is not available. Please wait a moment and try again."
+    else
+      flash[:notice] = "There was an error. Please wait a moment and try again."
+    end
+    redirect_to upload_lesson_video_path(@video.lesson, @video) and return
   end
 
   # PUT /videos/1

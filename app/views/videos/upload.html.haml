@@ -1,4 +1,8 @@
 %h2 Upload Your Video
+
+- if notice.present?
+  #notice{:style => "background-color: #FFFBCC; padding: 12px; margin: 12px 0;"}= notice
+
 %p Please select the video you would like to upload.
 %p Please keep videos as short as possible (no one likes a long, boring video).
 
