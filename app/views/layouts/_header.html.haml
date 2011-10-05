@@ -9,7 +9,9 @@
     %p "The best way to learn is to try and teach."
     %p
       - if user_signed_in?
-        = link_to("My Stuff", "")
+        = link_to("My Lessons", lessons_my_index_path)
+        &nbsp; | &nbsp;
+        = link_to("My Account", edit_user_registration_path)
         &nbsp; | &nbsp;
         = link_to("Log Out", destroy_user_session_path, :method => :delete)
       - else

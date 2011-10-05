@@ -1,7 +1,7 @@
 Upsidedownacademy::Application.routes.draw do
 
   resources :my do
-    member do
+    collection do
       get :lessons
     end
   end

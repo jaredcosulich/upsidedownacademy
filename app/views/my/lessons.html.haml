@@ -1,1 +1,21 @@
-Hi
+%h2 Lessons You've Created
+%table{:style => "width: 100%"}
+  %tr
+    %th Subject
+    %th Title
+    %th Confidence score
+    %th Publish Date
+    %th
+    %th
+    %th
+  - @lessons.each do |lesson|
+    %tr
+      %td= lesson.subject
+      %td= lesson.title
+      %td= lesson.confidence_score
+      %td= lesson.published_at.nil? ? "Not Published" : lesson.published_at.strftime("%m/%d/%Y")
+      %td= link_to 'Show', lesson
+      %td= link_to 'Edit', edit_lesson_path(lesson)
+      %td= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete
+%br
+= link_to 'New Lesson', new_lesson_path

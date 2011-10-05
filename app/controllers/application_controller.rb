@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
     cookies["unclaimed_lessons"].split(",").each do |lesson_id|
       Lesson.find(lesson_id).update_attributes(:user => current_user)
     end
+
+    cookies["unclaimed_lessons"] = nil
     return true
   end
 
