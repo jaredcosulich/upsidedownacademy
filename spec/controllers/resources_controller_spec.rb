@@ -74,7 +74,7 @@ describe ResourcesController do
 
       it "redirects to the created resource" do
         post :create, :resource => valid_attributes
-        response.should redirect_to(Resource.last)
+        response.should be_success
       end
     end
 

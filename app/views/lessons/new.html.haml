@@ -1,13 +1,16 @@
 - unless user_signed_in?
-  .lesson_tip.highlighted
-    %h3 Not Sure What Lesson To Create?
-    %p
-      The easiest way to come up with a lesson is to pay attention to what you find
-      confusing when you try to learn something new.
-    %p
-      Once you grasp the confusing piece try to come up with a way to teach it to
-      someone else that is less-confusing / more fun.
-    %p Voilà, you've got a lesson. 
+  .tip.highlighted
+    %h3
+      Not Sure What Lesson To Create?
+      %a.small.toggle_tip display tip
+    .tip_text{:style => "display: none;"}
+      %p
+        The easiest way to come up with a lesson is to pay attention to what you find
+        confusing when you try to learn something new.
+      %p
+        Once you grasp the confusing piece try to come up with a way to teach it to
+        someone else that is less-confusing / more fun.
+      %p Voilà, you've got a lesson.
 
 %h2 Create A New Lesson
 = render 'form'

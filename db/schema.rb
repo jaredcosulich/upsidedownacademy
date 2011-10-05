@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20111004225334) do
     t.integer  "lesson_id"
     t.string   "title"
     t.string   "url"
-    t.text     "comments"
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

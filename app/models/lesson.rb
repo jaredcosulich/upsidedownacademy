@@ -1,6 +1,7 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
   has_many :videos
+  has_many :resources
 
   scope :recent, order("created_at desc")
   scope :published, where("published_at is not null")

@@ -38,7 +38,7 @@
         = "\"#{@lesson.subject.downcase}\""
         or an expert.
       %p.small (we actually prefer to get lessons from people who are just starting out, but we appreciate experts as well)
-      %p Just try to be honest about your skill level so others will understand where you're at. 
+      %p Just try to be honest about your skill level so others will know what to expect. 
 
     .field
       %h3 Step 2 (of 4): Confidence Level
@@ -94,26 +94,27 @@
         %h3 Videos
         - if @lesson.videos.empty?
           %p.small You haven't yet added any videos to your lesson.
-          %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
         - @lesson.videos.each do |video|
           .video_thumbnail
             = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
             = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
             .small= simple_format(truncate(video.title, :length => 90))
+        %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
 
         %br
 
         %h3 Resources
-        - if @lesson.videos.empty?
+        - if @lesson.resources.empty?
           .small
             %p You haven't yet added any resource for your lesson.
             %p What resources did you find helpful when you were learning what you are now teaching?
-          %p= link_to("Add a resource for your lesson", new_lesson_resource_path(@lesson), :class => "lightbox")
-        - @lesson.videos.each do |video|
-          .video_thumbnail
-            = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
-            = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
-            .small= simple_format(truncate(video.title, :length => 90))
+        - else
+          %ul
+            - @lesson.resources.each do |resource|
+              %li.resource
+                = link_to(resource.title, resource.url, :target => "_blank")
+                .small= simple_format(truncate(resource.comment, :length => 90))
+        %p= link_to("Add a resource for your lesson", new_lesson_resource_path(@lesson), :class => "lightbox")
 
     .field
       %h3 Last Step: Your Lesson
