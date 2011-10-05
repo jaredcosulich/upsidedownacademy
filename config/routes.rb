@@ -1,5 +1,11 @@
 Upsidedownacademy::Application.routes.draw do
 
+  resources :my do
+    member do
+      get :lessons
+    end
+  end
+
   resources :resources
 
   match 'assign_youtube_id/:video_id' => 'videos#assign_youtube_id', :as => :assign_youtube_id

@@ -41,8 +41,11 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     @lesson = Lesson.find(params[:id])
+    if !user_signed_in? && @lesson.user_id.nil?
+      session[:user_return_to] = edit_lesson_path(@lesson)
+    end
   end
-
+  
   # POST /lessons
   # POST /lessons.json
   def create
