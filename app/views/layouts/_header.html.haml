@@ -12,5 +12,6 @@
         .basic_nav= link_to("Log In", new_user_session_path)
         .basic_nav.first_nav= link_to("Register", new_user_registration_path)
 
-      #site_quote "The best way to learn is to try and teach."
+      #site_quote{:style => "margin-right: #{user_signed_in? ? 90 : 142}px;"}
+        "The best way to learn is to try and teach."
 
