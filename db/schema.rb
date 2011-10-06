@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20111004225334) do
     t.date     "published_at"
   end
 
-  create_table "resources", :force => true do |t|
+  create_table "references", :force => true do |t|
     t.integer  "lesson_id"
     t.string   "title"
     t.string   "url"

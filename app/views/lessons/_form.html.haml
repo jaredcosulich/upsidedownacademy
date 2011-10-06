@@ -103,18 +103,18 @@
 
         %br
 
-        %h3 Resources
-        - if @lesson.resources.empty?
+        %h3 Reference Material
+        - if @lesson.references.empty?
           .small
-            %p You haven't yet added any resource for your lesson.
-            %p What resources did you find helpful when you were learning what you are now teaching?
+            %p You haven't yet added any reference material for your lesson.
+            %p What reference material did you find helpful when you were learning what you are now teaching?
         - else
           %ul
-            - @lesson.resources.each do |resource|
-              %li.resource
-                = link_to(resource.title, resource.url, :target => "_blank")
-                .small= simple_format(truncate(resource.comment, :length => 90))
-        %p= link_to("Add a resource for your lesson", new_lesson_resource_path(@lesson), :class => "lightbox")
+            - @lesson.references.each do |reference|
+              %li.reference
+                = link_to(reference.title, reference.url, :target => "_blank")
+                .small= simple_format(truncate(reference.comment, :length => 90))
+        %p= link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
 
     .field
       %h3 Last Step: Your Lesson
@@ -126,7 +126,7 @@
 
     .add
       %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
-      %p= link_to("Add a resource for your lesson", new_lesson_resource_path(@lesson), :class => "lightbox")
+      %p= link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
 
 
   .actions

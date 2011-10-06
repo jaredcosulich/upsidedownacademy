@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "resources/show.html.erb" do
+describe "references/show.html.erb" do
   before(:each) do
-    @resource = assign(:resource, stub_model(Resource,
+    @reference = assign(:reference, stub_model(Reference,
       :title => "Title",
       :url => "Url",
       :comments => "MyText"

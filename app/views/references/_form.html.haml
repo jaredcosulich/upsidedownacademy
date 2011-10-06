@@ -1,0 +1,26 @@
+= form_for(@reference, :url => lesson_references_path(@lesson)) do |f|
+  - if @reference.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@reference.errors.count, "error")
+        prohibited this resource from being saved:
+      %ul
+        - @reference.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    %p
+      = f.label :title, "Title / name of the reference material:"
+      %br
+      = f.text_field :title
+  .field
+    %p
+      = f.label :url, "Where can you find this reference material?"
+      %br
+      = f.text_field :url
+  .field
+    %p
+      = f.label :comment
+      %br/
+      = f.text_area :comment
+  .actions
+    %p= f.submit

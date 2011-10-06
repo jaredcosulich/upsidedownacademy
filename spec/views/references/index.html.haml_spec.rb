@@ -1,14 +1,14 @@
 require 'spec_helper'
 
-describe "resources/index.html.erb" do
+describe "references/index.html.erb" do
   before(:each) do
-    assign(:resources, [
-      stub_model(Resource,
+    assign(:references, [
+      stub_model(Reference,
         :title => "Title",
         :url => "Url",
         :comments => "MyText"
       ),
-      stub_model(Resource,
+      stub_model(Reference,
         :title => "Title",
         :url => "Url",
         :comments => "MyText"
@@ -16,7 +16,7 @@ describe "resources/index.html.erb" do
     ])
   end
 
-  it "renders a list of resources" do
+  it "renders a list of references" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Title".to_s, :count => 2

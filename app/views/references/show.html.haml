@@ -1,0 +1,13 @@
+%p#notice= notice
+%p
+  %b Title:
+  = @reference.title
+%p
+  %b Url:
+  = @reference.url
+%p
+  %b Comments:
+  = @reference.comments
+= link_to 'Edit', edit_reference_path(@reference)
+|
+\#{link_to 'Back', references_path}

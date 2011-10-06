@@ -16,7 +16,7 @@ Upsidedownacademy::Application.routes.draw do
     end
   end
 
-  resources :resources
+  resources :references
 
   resources :lessons do
     resources :videos do
@@ -24,7 +24,7 @@ Upsidedownacademy::Application.routes.draw do
         get :upload
       end
     end
-    resources :resources
+    resources :references
   end
   
   root :to => 'home#index'
