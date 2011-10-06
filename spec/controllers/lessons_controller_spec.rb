@@ -29,7 +29,7 @@ describe LessonsController do
 
   describe "GET index" do
     it "assigns all lessons as @lessons" do
-      lesson = Lesson.create! valid_attributes
+      lesson = Lesson.create! valid_attributes.merge(:published_at => Date.today)
       get :index
       assigns(:lessons).should eq([lesson])
     end
