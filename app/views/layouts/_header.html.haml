@@ -4,8 +4,6 @@
       = link_to(image_tag("flag_logo.png"), root_path)
 
     #basic_navigation
-      #site_quote "The best way to learn is to try and teach."
-
       - if user_signed_in?
         .basic_nav= link_to("Log Out", destroy_user_session_path, :method => :delete)
         .basic_nav= link_to("My Account", edit_user_registration_path)
@@ -13,4 +11,6 @@
       - else
         .basic_nav= link_to("Log In", new_user_session_path)
         .basic_nav.first_nav= link_to("Register", new_user_registration_path)
+
+      #site_quote "The best way to learn is to try and teach."
 
