@@ -1,5 +1,5 @@
 %h2
-  = "#{link_to @lesson.subject, edit_lesson_path(@lesson, :edit_subject => 1)}: ".html_safe
+  = "#{link_to "#{@lesson.subject} : #{@lesson.specific_subject}", edit_lesson_path(@lesson, :edit_subject => 1)}: ".html_safe
   - unless @lesson.title.blank?
     = link_to @lesson.title, edit_lesson_path(@lesson, :edit_title => 1)
 

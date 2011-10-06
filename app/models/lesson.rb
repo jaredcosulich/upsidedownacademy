@@ -21,7 +21,7 @@ class Lesson < ActiveRecord::Base
   ]
 
   def full_title
-    "#{subject}: #{title}"
+    "#{subject}: #{specific_subject}: #{title}"
   end
 
   def complete?
@@ -34,6 +34,6 @@ class Lesson < ActiveRecord::Base
   end
 
   def to_param
-    "#{id}_#{subject.sluggify}_#{title.sluggify}".downcase
+    "#{id}_#{subject.sluggify}_#{specific_subject.sluggify}_#{title.sluggify}".downcase
   end
 end

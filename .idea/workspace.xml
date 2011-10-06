@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/donate.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/for_everyone.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/for_home_schoolers.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/for_students.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/for_teachers.html.haml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/about/press.html.haml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20111006165743_add_initial_indices.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/about_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/about_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/lessons_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/lessons_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_footer.html.haml" afterPath="$PROJECT_DIR$/app/views/layouts/_footer.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/lesson.rb" afterPath="$PROJECT_DIR$/app/models/lesson.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="upsidedownacademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,91 +31,46 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="about_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/about_controller.rb">
+      <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="214" selection-end="214" vertical-scroll-proportion="-14.592592">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.037037">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="for_everyone.html.haml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/about/for_everyone.html.haml">
+      <file leaf-file-name="20111006165743_add_initial_indices.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20111006165743_add_initial_indices.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="2" selection-start="172" selection-end="172" vertical-scroll-proportion="0.24255319">
+            <state line="20" column="10" selection-start="419" selection-end="419" vertical-scroll-proportion="-14.074074">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="for_students.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/about/for_students.html.haml">
+      <file leaf-file-name="_form.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="75" selection-start="114" selection-end="114" vertical-scroll-proportion="-2.1111112">
+            <state line="147" column="0" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.86520946">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="for_home_schoolers.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/about/for_home_schoolers.html.haml">
+      <file leaf-file-name="_lesson_header.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="82" selection-start="431" selection-end="431" vertical-scroll-proportion="-4.962963">
+            <state line="1" column="65" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.7037037">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="for_teachers.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/about/for_teachers.html.haml">
+      <file leaf-file-name="lesson.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="9" selection-start="1572" selection-end="1572" vertical-scroll-proportion="-14.814815">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_footer.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="43" selection-start="395" selection-end="395" vertical-scroll-proportion="-7.037037">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="23" selection-start="660" selection-end="660" vertical-scroll-proportion="-7.740741">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="donate.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/about/donate.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="19" selection-start="19" selection-end="19" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="press.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/about/press.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lessons_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="-4.2222223">
+            <state line="36" column="42" selection-start="1420" selection-end="1420" vertical-scroll-proportion="-14.481482">
               <folding />
             </state>
           </provider>
@@ -162,11 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/references/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/home/index.html.haml" />
-        <option value="$PROJECT_DIR$/app/views/lessons/new.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" />
-        <option value="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/views/about/index.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/lessons_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/about/press.html.haml" />
@@ -178,6 +123,11 @@
         <option value="$PROJECT_DIR$/app/views/about/for_home_schoolers.html.haml" />
         <option value="$PROJECT_DIR$/app/views/about/for_students.html.haml" />
         <option value="$PROJECT_DIR$/app/views/about/for_everyone.html.haml" />
+        <option value="$PROJECT_DIR$/db/migrate/20111006165743_add_initial_indices.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
+        <option value="$PROJECT_DIR$/app/models/lesson.rb" />
+        <option value="$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
       </list>
     </option>
   </component>
@@ -1373,14 +1323,14 @@
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32948717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20769231" sideWeight="0.81203437" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20769231" sideWeight="0.81203437" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3423077" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21610169" sideWeight="0.67435896" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21610169" sideWeight="0.7923077" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32564104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32564104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1447,41 +1397,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/references/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="160" selection-end="160" vertical-scroll-proportion="-7.037037">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="65" selection-start="735" selection-end="735" vertical-scroll-proportion="-11.259259">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/new.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="42" selection-start="1440" selection-end="1440" vertical-scroll-proportion="-16.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="43" selection-start="4196" selection-end="4196" vertical-scroll-proportion="0.75054705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/about/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="519" selection-end="519" vertical-scroll-proportion="-7.0740743">
@@ -1491,7 +1406,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="-4.2222223">
+        <state line="6" column="35" selection-start="136" selection-end="136" vertical-scroll-proportion="0.24255319">
           <folding />
         </state>
       </provider>
@@ -1512,35 +1427,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="43" selection-start="395" selection-end="395" vertical-scroll-proportion="-7.037037">
+        <state line="10" column="43" selection-start="395" selection-end="395" vertical-scroll-proportion="0.40425533">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="23" selection-start="660" selection-end="660" vertical-scroll-proportion="-7.740741">
+        <state line="35" column="23" selection-start="660" selection-end="660" vertical-scroll-proportion="0.4573304">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/about/for_teachers.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="9" selection-start="1572" selection-end="1572" vertical-scroll-proportion="-14.814815">
+        <state line="45" column="9" selection-start="1572" selection-end="1572" vertical-scroll-proportion="0.8752735">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/about/for_home_schoolers.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="82" selection-start="431" selection-end="431" vertical-scroll-proportion="-4.962963">
+        <state line="9" column="82" selection-start="431" selection-end="431" vertical-scroll-proportion="0.29321662">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/about/for_students.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="75" selection-start="114" selection-end="114" vertical-scroll-proportion="-2.1111112">
+        <state line="3" column="75" selection-start="114" selection-end="114" vertical-scroll-proportion="0.121276595">
           <folding />
         </state>
       </provider>
@@ -1555,6 +1470,41 @@
     <entry file="file://$PROJECT_DIR$/app/views/about/for_everyone.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="2" selection-start="172" selection-end="172" vertical-scroll-proportion="0.24255319">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="7.037037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20111006165743_add_initial_indices.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="419" selection-end="419" vertical-scroll-proportion="-14.074074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="42" selection-start="1420" selection-end="1420" vertical-scroll-proportion="-14.481482">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="65" selection-start="69" selection-end="69" vertical-scroll-proportion="-0.7037037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="147" column="0" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.86520946">
           <folding />
         </state>
       </provider>

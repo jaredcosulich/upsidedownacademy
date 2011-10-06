@@ -13,22 +13,41 @@
       %h3 Example Subjects / Skills
       %p You can try to teach any subject or skill.
       %p Some examples:
+      .right{:style => "margin-right: 30px;"}
+        %h4 Specific Subjects
+        %ul
+          %li Algebra
+          %li Frying an egg
+          %li Hitting a baseball
+          %li Grammar
+          %li Salsa dancing
+          %li Speed reading
+          %li Chemistry
+          %li etc
+
+      %h4 General Subjects
       %ul
-        %li Algebra
-        %li Frying an egg
-        %li Hitting a baseball
-        %li Grammar
-        %li Salsa dancing
-        %li Speed reading
-        %li Chemistry
-        %li etc   
+        %li Math
+        %li Cooking
+        %li Baseball
+        %li English
+        %li Dancing
+        %li Reading
+        %li Science
+        %li etc
 
     .field
       %h3 Step 1 (of 4): Lesson Subject
-      %p= f.label :subject, "What subject or skill are you trying to learn / teach?"
       %p
-        = f.label :subject, "Subject:"
-        = f.text_field :subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
+        = f.label :subject, "What subject or skill are you trying to learn / teach?"
+        %br
+        %span.small (don't worry too much about this, just try to fill them in)
+      %p
+        = f.label :subject, "General Subject:"
+        = f.text_field :subject, "data-hint" => 'e.g. "Math" or "Cooking"'
+      %p
+        = f.label :specific_subject, "Specific Subject:"
+        = f.text_field :specific_subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
 
   - elsif @lesson.confidence_score.blank? || params.include?(:edit_confidence)
     .right.example_lesson_info
@@ -54,25 +73,25 @@
       %ul
         %li
           %p
-            Subject: Algebra
+            Math: Algebra
             %br
             Title:
             %b Solving a simple equation
         %li
           %p
-            Subject: Frying an egg
+            Cooking: Frying an egg
             %br
             Title:
             %b How to flip the egg
         %li
           %p
-            Subject: Grammar
+            English: Grammar
             %br
             Title:
             %b How to use commas
         %li
           %p
-            Subject: Golf
+            Golf: Striking The Ball
             %br
             Title:
             %b How to put backspin on the ball
@@ -130,6 +149,11 @@
 
 
   .actions
-    %p= f.submit "Save Lesson"
+    %p= f.submit "Save And Continue"
+    - unless @lesson.new_record?
+      %p.small
+        You can change any of this information at any time.
+        %br
+        To change it now just click on the information above.
 
 = render "devise/registrations/short_form" if current_user.nil?
