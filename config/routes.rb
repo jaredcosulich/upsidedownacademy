@@ -4,12 +4,6 @@ Upsidedownacademy::Application.routes.draw do
 
   devise_for :users
 
-  resources :about do
-    collection do
-      get :contact
-    end
-  end
-
   resources :my do
     collection do
       get :lessons
@@ -30,7 +24,19 @@ Upsidedownacademy::Application.routes.draw do
   root :to => 'home#index'
 
   resources :profiles, :only => :show
-  
+
+  resources :about do
+    collection do
+      get :contact
+      get :press
+      get :donate
+      get :for_teachers
+      get :for_home_schoolers
+      get :for_students
+      get :for_everyone
+    end
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

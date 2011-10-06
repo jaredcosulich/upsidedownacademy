@@ -4,7 +4,7 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.all.published
 
     respond_to do |format|
       format.html # index.html.erb
@@ -94,4 +94,5 @@ class LessonsController < ApplicationController
       format.json { head :ok }
     end
   end
+
 end
