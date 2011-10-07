@@ -12,8 +12,8 @@
       %td= reference.title
       %td= reference.url
       %td= reference.comments
-      %td= link_to 'Show', reference
-      %td= link_to 'Edit', edit_reference_path(reference)
-      %td= link_to 'Destroy', reference, confirm: 'Are you sure?', method: :delete
+      %td= link_to 'Show', lesson_reference_path(@lesson, reference)
+      %td= link_to 'Edit', edit_lesson_reference_path(@lesson, reference)
+      %td= link_to 'Destroy', lesson_reference_path(@lesson, reference), confirm: 'Are you sure?', method: :delete
 %br/
-= link_to 'New Reference', new_reference_path
+= link_to 'New Reference', new_lesson_reference_path(@lesson)

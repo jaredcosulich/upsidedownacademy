@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Lesson:
+  = @photo.lesson_id
+%p
+  %b Title:
+  = @photo.title
+%p
+  %b Caption:
+  = @photo.caption
+= link_to 'Edit', edit_lesson_photo_path(@lesson, @photo)

@@ -1,24 +1,23 @@
 require 'spec_helper'
 
-describe "references/show.html.erb" do
+describe "photos/show.html.haml" do
   before(:each) do
     @lesson = Factory(:lesson)
     assign(:lesson, @lesson)
-    @reference = assign(:reference, stub_model(Reference,
+    @photo = assign(:photo, stub_model(Photo,
       :lesson => @lesson,
       :title => "Title",
-      :url => "Url",
-      :comments => "MyText"
+      :caption => "Caption"
     ))
   end
 
   it "renders attributes in <p>" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
+    rendered.should match(/1/)
+    # Run the generator again with the --webrat flag if you want to use webrat matchers
     rendered.should match(/Title/)
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Url/)
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/MyText/)
+    rendered.should match(/Caption/)
   end
 end

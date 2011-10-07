@@ -1,5 +1,6 @@
 Upsidedownacademy::Application.routes.draw do
 
+
   match 'assign_youtube_id/:video_id' => 'videos#assign_youtube_id', :as => :assign_youtube_id
 
   devise_for :users
@@ -10,14 +11,13 @@ Upsidedownacademy::Application.routes.draw do
     end
   end
 
-  resources :references
-
   resources :lessons do
     resources :videos do
       member do
         get :upload
       end
     end
+    resources :photos
     resources :references
   end
   

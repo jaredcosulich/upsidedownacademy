@@ -23,6 +23,8 @@ gem 'haml'
 gem 'devise'
 gem 'pg'
 gem 'sluggable'
+gem 'paperclip'
+gem 'aws-s3', '0.6.2', :require => 'aws/s3'
 
 
 # Use unicorn as the web server

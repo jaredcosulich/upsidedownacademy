@@ -27,10 +27,14 @@ describe ReferencesController do
     {}
   end
 
+  before :each do
+    @lesson = Factory(:lesson)
+  end
+
   describe "GET index" do
     it "assigns all references as @references" do
       reference = Reference.create! valid_attributes
-      get :index
+      get :index, :lesson_id => @lesson.id.to_s
       assigns(:references).should eq([reference])
     end
   end
@@ -38,14 +42,14 @@ describe ReferencesController do
   describe "GET show" do
     it "assigns the requested reference as @reference" do
       reference = Reference.create! valid_attributes
-      get :show, :id => reference.id.to_s
+      get :show, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       assigns(:reference).should eq(reference)
     end
   end
 
   describe "GET new" do
     it "assigns a new reference as @reference" do
-      get :new
+      get :new, :lesson_id => @lesson.id.to_s
       assigns(:reference).should be_a_new(Reference)
     end
   end
@@ -53,7 +57,7 @@ describe ReferencesController do
   describe "GET edit" do
     it "assigns the requested reference as @reference" do
       reference = Reference.create! valid_attributes
-      get :edit, :id => reference.id.to_s
+      get :edit, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       assigns(:reference).should eq(reference)
     end
   end
@@ -62,18 +66,18 @@ describe ReferencesController do
     describe "with valid params" do
       it "creates a new Reference" do
         expect {
-          post :create, :reference => valid_attributes
+          post :create, :lesson_id => @lesson.id.to_s, :reference => valid_attributes
         }.to change(Reference, :count).by(1)
       end
 
       it "assigns a newly created reference as @reference" do
-        post :create, :reference => valid_attributes
+        post :create, :lesson_id => @lesson.id.to_s, :reference => valid_attributes
         assigns(:reference).should be_a(Reference)
         assigns(:reference).should be_persisted
       end
 
       it "redirects to the created reference" do
-        post :create, :reference => valid_attributes
+        post :create, :lesson_id => @lesson.id.to_s, :reference => valid_attributes
         response.should be_success
       end
     end
@@ -82,14 +86,14 @@ describe ReferencesController do
       it "assigns a newly created but unsaved reference as @reference" do
         # Trigger the behavior that occurs when invalid params are submitted
         Reference.any_instance.stub(:save).and_return(false)
-        post :create, :reference => {}
+        post :create, :lesson_id => @lesson.id.to_s, :reference => {}
         assigns(:reference).should be_a_new(Reference)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Reference.any_instance.stub(:save).and_return(false)
-        post :create, :reference => {}
+        post :create, :lesson_id => @lesson.id.to_s, :reference => {}
         response.should render_template("new")
       end
     end
@@ -104,19 +108,19 @@ describe ReferencesController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Reference.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => reference.id, :reference => {'these' => 'params'}
+        put :update, :lesson_id => @lesson.id.to_s, :id => reference.id, :reference => {'these' => 'params'}
       end
 
       it "assigns the requested reference as @reference" do
         reference = Reference.create! valid_attributes
-        put :update, :id => reference.id, :reference => valid_attributes
+        put :update, :lesson_id => @lesson.id.to_s, :id => reference.id, :reference => valid_attributes
         assigns(:reference).should eq(reference)
       end
 
       it "redirects to the reference" do
         reference = Reference.create! valid_attributes
-        put :update, :id => reference.id, :reference => valid_attributes
-        response.should redirect_to(reference)
+        put :update, :lesson_id => @lesson.id.to_s, :id => reference.id, :reference => valid_attributes
+        response.should redirect_to(lesson_path(@lesson))
       end
     end
 
@@ -125,7 +129,7 @@ describe ReferencesController do
         reference = Reference.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Reference.any_instance.stub(:save).and_return(false)
-        put :update, :id => reference.id.to_s, :reference => {}
+        put :update, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s, :reference => {}
         assigns(:reference).should eq(reference)
       end
 
@@ -133,7 +137,7 @@ describe ReferencesController do
         reference = Reference.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Reference.any_instance.stub(:save).and_return(false)
-        put :update, :id => reference.id.to_s, :reference => {}
+        put :update, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s, :reference => {}
         response.should render_template("edit")
       end
     end
@@ -143,14 +147,14 @@ describe ReferencesController do
     it "destroys the requested reference" do
       reference = Reference.create! valid_attributes
       expect {
-        delete :destroy, :id => reference.id.to_s
+        delete :destroy, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       }.to change(Reference, :count).by(-1)
     end
 
     it "redirects to the references list" do
       reference = Reference.create! valid_attributes
-      delete :destroy, :id => reference.id.to_s
-      response.should redirect_to(references_url)
+      delete :destroy, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
+      response.should redirect_to(lesson_path(@lesson))
     end
   end
 

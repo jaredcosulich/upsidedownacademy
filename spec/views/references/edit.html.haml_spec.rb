@@ -5,6 +5,7 @@ describe "references/edit.html.erb" do
     @lesson = assign(:lesson, stub_model(Lesson))
 
     @reference = assign(:reference, stub_model(Reference,
+      :lesson => @lesson,
       :title => "MyString",
       :url => "MyString",
       :comment => "MyText"

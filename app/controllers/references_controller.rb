@@ -63,7 +63,7 @@ class ReferencesController < ApplicationController
 
     respond_to do |format|
       if @reference.update_attributes(params[:reference])
-        format.html { redirect_to @reference, notice: 'Reference was successfully updated.' }
+        format.html { redirect_to lesson_path(@lesson), notice: 'Reference was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -79,7 +79,7 @@ class ReferencesController < ApplicationController
     @reference.destroy
 
     respond_to do |format|
-      format.html { redirect_to references_url }
+      format.html { redirect_to lesson_path(@lesson) }
       format.json { head :ok }
     end
   end

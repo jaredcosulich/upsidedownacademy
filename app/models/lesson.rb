@@ -1,6 +1,7 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
   has_many :videos
+  has_many :photos
   has_many :references
 
   scope :recent, order("created_at desc")

@@ -45,5 +45,23 @@ module Upsidedownacademy
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.before_initialize do
+      ::S3_PAPERCLIP_STORAGE_OPTIONS = {
+        :storage => :s3,
+        :s3_credentials => "#{Rails.root}/config/s3.yml",
+        :s3_host_alias => 'photos.upsidedownacademy.org',
+        :s3_headers => {'Expires' => 1.year.from_now.httpdate},
+        :bucket => 'photos.upsidedownacademy.org',
+        :url => ":s3_alias_url",
+        :path => "#{Rails.env}/:class/:id/:style"
+      }
+
+      ::LOCAL_PAPERCLIP_STORAGE_OPTIONS = {
+        :url => "/system/attachments/:attachment/:class/:id/:style/:filename"
+      }
+
+      Haml::Template.options[:format] = :html5
+    end
   end
 end

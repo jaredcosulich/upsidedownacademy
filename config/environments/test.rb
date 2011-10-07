@@ -37,6 +37,10 @@ Upsidedownacademy::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
+  config.before_initialize do
+    ::PAPERCLIP_STORAGE_OPTIONS = LOCAL_PAPERCLIP_STORAGE_OPTIONS
+  end
+
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
 end

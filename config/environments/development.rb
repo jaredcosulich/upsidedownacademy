@@ -30,5 +30,9 @@ Upsidedownacademy::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
+  config.before_initialize do
+    ::PAPERCLIP_STORAGE_OPTIONS = S3_PAPERCLIP_STORAGE_OPTIONS
+  end
+
   YOUTUBE_DEVELOPER_KEY = "AI39si7ZmAOG9ra7FLHiK_pqIZ77Xp0IqOlHxAQXYNrG2PTKZiuzUL-fRmtjFCoJSb7WIjOAeJI3XGb_ikSxjaBq6Fep-gHT7A"
 end
