@@ -4,11 +4,9 @@
     <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/photos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/photos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/_form.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/photo.rb" afterPath="$PROJECT_DIR$/app/models/photo.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/show.html.haml" afterPath="$PROJECT_DIR$/app/views/lessons/show.html.haml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/show.html.haml" afterPath="$PROJECT_DIR$/app/views/photos/show.html.haml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/_video.html.haml" afterPath="$PROJECT_DIR$/app/views/videos/_video.html.haml" />
     </list>
     <ignored path="upsidedownacademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,15 +30,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_form.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="131" column="33" selection-start="4756" selection-end="4756" vertical-scroll-proportion="-14.333333">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="videos_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/videos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -62,16 +51,34 @@
       <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="104" selection-start="895" selection-end="989" vertical-scroll-proportion="-10.555555">
+            <state line="34" column="0" selection-start="953" selection-end="953" vertical-scroll-proportion="-10.111111">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.haml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="site.css.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="21" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-0.7037037">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lesson_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/models/lesson_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.haml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/photos/show.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="21" selection-start="40" selection-end="40" vertical-scroll-proportion="0.08558559">
+            <state line="2" column="21" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.4074074">
               <folding />
             </state>
           </provider>
@@ -86,19 +93,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lesson.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
+      <file leaf-file-name="lessons.css.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="47" selection-start="1373" selection-end="1373" vertical-scroll-proportion="-8.777778">
+            <state line="14" column="14" selection-start="391" selection-end="391" vertical-scroll-proportion="-9.851851">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lessons.css.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
+      <file leaf-file-name="photo.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="24" selection-start="1082" selection-end="1082" vertical-scroll-proportion="-14.407408">
+            <state line="5" column="57" selection-start="177" selection-end="177" vertical-scroll-proportion="0.20787746">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_video.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/videos/_video.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="31" selection-start="72" selection-end="72" vertical-scroll-proportion="-0.7037037">
               <folding />
             </state>
           </provider>
@@ -143,19 +159,19 @@
         <option value="$PROJECT_DIR$/config/initializers/youtube.rb" />
         <option value="$PROJECT_DIR$/app/helpers/lessons_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/lesson.rb" />
-        <option value="$PROJECT_DIR$/app/views/videos/_video.html.haml" />
-        <option value="$PROJECT_DIR$/app/models/photo.rb" />
         <option value="$PROJECT_DIR$/app/views/lessons/edit.html.haml" />
         <option value="$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/site.css.sass" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/references/show.html.haml" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" />
         <option value="$PROJECT_DIR$/app/views/lessons/_form.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/photos_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/lessons/show.html.haml" />
         <option value="$PROJECT_DIR$/app/views/photos/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass" />
+        <option value="$PROJECT_DIR$/app/views/videos/_video.html.haml" />
+        <option value="$PROJECT_DIR$/app/views/lessons/show.html.haml" />
+        <option value="$PROJECT_DIR$/app/models/photo.rb" />
       </list>
     </option>
   </component>
@@ -228,6 +244,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1049,7 +1083,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="5" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- notices on all pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="- displaying photos in lesson" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1062,7 +1096,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="- tweaking confidence levels" />
     <MESSAGE value="- fixing tests, adding factory girl" />
     <MESSAGE value="- working on user registration flow" />
     <MESSAGE value="- working on lesson creation flow" />
@@ -1087,42 +1120,15 @@
     <MESSAGE value="- adding photos and videos flow&#10;- lessons#show page" />
     <MESSAGE value="- tweaking lessons page" />
     <MESSAGE value="- notices on all pages" />
+    <MESSAGE value="- displaying photos in lesson" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/videos/_video.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="57" selection-start="177" selection-end="177" vertical-scroll-proportion="-3.5185184">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/edit.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="330" selection-end="330" vertical-scroll-proportion="-8.444445">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lessons/_lesson_header.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="2" selection-start="2" selection-end="2" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="21" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-15.518518">
           <folding />
         </state>
       </provider>
@@ -1155,13 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="24" selection-start="1082" selection-end="1082" vertical-scroll-proportion="-14.407408">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/lessons/_form.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="131" column="33" selection-start="4756" selection-end="4756" vertical-scroll-proportion="-14.333333">
@@ -1183,13 +1182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="104" selection-start="895" selection-end="989" vertical-scroll-proportion="-10.555555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/videos/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
@@ -1199,7 +1191,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/photos/show.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="21" selection-start="40" selection-end="40" vertical-scroll-proportion="0.08558559">
+        <state line="2" column="21" selection-start="40" selection-end="40" vertical-scroll-proportion="-1.4074074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/site.css.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="21" selection-start="1640" selection-end="1640" vertical-scroll-proportion="-0.7037037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/models/lesson_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="14" selection-start="391" selection-end="391" vertical-scroll-proportion="-9.851851">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/videos/_video.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="31" selection-start="72" selection-end="72" vertical-scroll-proportion="-0.7037037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/lessons/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="953" selection-end="953" vertical-scroll-proportion="-10.111111">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="57" selection-start="177" selection-end="177" vertical-scroll-proportion="0.20787746">
           <folding />
         </state>
       </provider>
