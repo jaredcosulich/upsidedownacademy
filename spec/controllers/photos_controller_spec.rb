@@ -134,7 +134,7 @@ describe PhotosController do
     it "redirects to the photos list" do
       photo = Photo.create! valid_attributes
       delete :destroy, :lesson_id => @lesson.id.to_s, :id => photo.id.to_s
-      response.should redirect_to(lesson_path(@lesson))
+      response.should redirect_to(edit_lesson_path(@lesson))
     end
   end
 
