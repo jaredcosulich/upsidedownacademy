@@ -26,6 +26,9 @@
   .photos_and_videos.right    
     - if @lesson.videos.empty? && @lesson.photos.empty?
       %p No videos or images have been added to this lesson.
+      - if lesson_owner?(@lesson)
+        = link_to("Add a video to your lesson >", new_lesson_video_path(@lesson), :class => "lightbox")
+        = link_to("Add a photo/image/drawing to your lesson >", new_lesson_photo_path(@lesson), :class => "lightbox")
 
     - @lesson.videos.each do |video|
       .video
@@ -45,3 +48,16 @@
     = simple_format(@lesson.body.html_safe).html_safe
 
 
+  .references
+    %h3 Reference Material
+    %p The following sources were helpful when I was learning this material.
+    - if @lesson.references.empty?
+      No references were used in learning the material.
+    - else
+      %ul
+        - @lesson.references.each do |reference|
+          %li
+            = link_to_unless(reference.url.blank?, reference.title, reference.url, :target => "_blank")
+            .small= simple_format(truncate(reference.comment, :length => 90))
+    - if lesson_owner?(@lesson)
+      %p= link_to("Add reference material for your lesson >", new_lesson_reference_path(@lesson), :class => "lightbox")

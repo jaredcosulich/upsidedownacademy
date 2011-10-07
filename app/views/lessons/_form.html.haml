@@ -140,12 +140,14 @@
               %p You haven't yet added any reference material for your lesson.
               %p What reference material did you find helpful when you were learning what you are now teaching?
           - else
-            %ul
-              - @lesson.references.each do |reference|
-                %li.reference
-                  = link_to(reference.title, reference.url, :target => "_blank")
-                  .small= simple_format(truncate(reference.comment, :length => 90))
-          %p= link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
+            - @lesson.references.each do |reference|
+              .reference_preview
+                = link_to(reference.title, reference.url, :target => "_blank")
+                .small= simple_format(truncate(reference.comment, :length => 90))
+                .links.small.clear.right
+                  = link_to("delete", lesson_reference_path(@lesson, reference), :method => :delete, :confirm => "Are you sure you want to delete this reference material?")
+
+          = link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
 
     .field
       %h3 Last Step: Your Lesson
