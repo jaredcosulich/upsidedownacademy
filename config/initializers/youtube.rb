@@ -14,14 +14,14 @@ class YouTube
 xmlns:media="http://search.yahoo.com/mrss/"
 xmlns:yt="http://gdata.youtube.com/schemas/2007">
 <media:group>
-<media:title type="plain">Lesson: #{video.title || lesson.full_title}</media:title>
+<media:title type="plain">#{video.title || lesson.full_title}</media:title>
 <media:description type="plain">
 This video is a component of the lesson, "#{lesson.full_title}". The full lesson can be found on UpsideDownAcademy.org - #{lesson_url}.
 </media:description>
 <media:category
 scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Education
 </media:category>
-<media:keywords>education, #{lesson.subject}</media:keywords>
+<media:keywords>education, #{lesson.subject}, #{lesson.specific_subject}</media:keywords>
 </media:group>
 </entry>
     xml_data

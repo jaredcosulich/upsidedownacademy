@@ -109,44 +109,43 @@
         %h3 Your Lesson
         %p Please try to write out as much of your lesson as possible, even if you're including a video.
         %p It's easier for people to search text than to search/scan through a video.
-      .photos_and_videos
-        %h3 Videos
-        - if @lesson.videos.empty?
-          %p.small You haven't yet added any videos to your lesson.
-        - @lesson.videos.each do |video|
-          .video_thumbnail
-            = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
-            = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
-            .small= simple_format(truncate(video.title, :length => 90))
-        %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
+      .photos_and_videos_preview
+        .section
+          %h3 Videos
+          - if @lesson.videos.empty?
+            %p.small You haven't yet added any videos to your lesson.
+          - @lesson.videos.each do |video|
+            .video_thumbnail
+              = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
+              = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
+              .small= simple_format(truncate(video.caption, :length => 90))
+          = link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
 
-        %br
+        .section
+          %h3 Photos / Images / Drawings
+          - if @lesson.photos.empty?
+            %p.small You haven't yet added any photos/images/drawings to your lesson.
+          - @lesson.photos.each do |photo|
+            .photo_thumbnail
+              = link_to(image_tag(photo.image.url(:small)), photo.image.url(:large), :class => "lightbox")
+              = link_to(photo.title, photo.image.url(:large), :class => "lightbox")
+              .small= simple_format(truncate(photo.caption, :length => 90))
 
-        %h3 Photos / Images / Drawings
-        - if @lesson.photos.empty?
-          %p.small You haven't yet added any photos/images/drawings to your lesson.
-        - @lesson.photos.each do |photo|
-          .photo_thumbnail
-            = link_to(image_tag(photo.image.url(:small)), photo.image.url(:large), :class => "lightbox")
-            = link_to(photo.title, photo.image.url(:large), :class => "lightbox")
-            .small= simple_format(truncate(photo.caption, :length => 90))
+          = link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
 
-        %p= link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
-
-        %br
-
-        %h3 Reference Material
-        - if @lesson.references.empty?
-          .small
-            %p You haven't yet added any reference material for your lesson.
-            %p What reference material did you find helpful when you were learning what you are now teaching?
-        - else
-          %ul
-            - @lesson.references.each do |reference|
-              %li.reference
-                = link_to(reference.title, reference.url, :target => "_blank")
-                .small= simple_format(truncate(reference.comment, :length => 90))
-        %p= link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
+        .section
+          %h3 Reference Material
+          - if @lesson.references.empty?
+            .small
+              %p You haven't yet added any reference material for your lesson.
+              %p What reference material did you find helpful when you were learning what you are now teaching?
+          - else
+            %ul
+              - @lesson.references.each do |reference|
+                %li.reference
+                  = link_to(reference.title, reference.url, :target => "_blank")
+                  .small= simple_format(truncate(reference.comment, :length => 90))
+          %p= link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
 
     .field
       %h3 Last Step: Your Lesson

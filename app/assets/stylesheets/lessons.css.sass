@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.lesson
+  overflow: hidden
+  padding-bottom: 30px
+  .lesson_info
+    padding: 6px
+    border: 1px solid #ccc
+    background-color: #eee
+    margin-bottom: 12px
+    line-height: 1.5em
+
 .tip
   margin-bottom: 30px
 
@@ -24,11 +34,19 @@
   margin-bottom: 30px
 
 .photos_and_videos
+  width: 390px
+  margin-left: 60px
+
+.photos_and_videos_preview
   margin-top: 30px
-  width: 360px  
-  .video_thumbnail, .photo_thumbnail
-    overflow: hidden
-    margin-bottom: 12px
-    img
-      float: left
-      margin-right: 12px
+  width: 360px
+  .section
+    padding-bottom: 30px
+    .video_thumbnail, .photo_thumbnail
+      border: 1px solid #ccc
+      padding: 6px
+      overflow: hidden
+      margin-bottom: 12px
+      img
+        float: left
+        margin-right: 12px
