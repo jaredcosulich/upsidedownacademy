@@ -16,6 +16,9 @@
         learn what ever you are learning right now.
 
       #content
+        - if notice.present?
+          #notice= notice
+
         = yield
 
         = render "layouts/footer"
