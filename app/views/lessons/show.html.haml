@@ -1,11 +1,27 @@
 %p#notice= notice
 
+.right
+  - unless @lesson.videos.empty?
+    %h3 Videos
+    - @lesson.videos.each do |video|
+      %h4= video.title
+      = render "videos/video", :video => video, :size => :medium
+      .small= simple_format(video.caption)
+
+  - unless @lesson.photos.empty?
+    %h3 Images
+    - @lesson.photos.each do |photo|
+      %h4= photo.title
+      = link_to(image_tag(photo.image.url), photo.image.url(:large))
+      .small= simple_format(photo.caption)
+
+
 %h2= @lesson.full_title
 %p
   Created by:
-  = @lesson.user.display_name
+  = lesson_creator(@lesson)
 %p
-  = "#{@lesson.user.display_name}'s"
+  = "#{lesson_creator(@lesson)}'s"
   confidence with
   = "#{@lesson.subject.downcase}:"
   %br

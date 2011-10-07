@@ -54,7 +54,7 @@
       %h3 Confidence Level
       %p
         It doesn't matter if you're a complete novice at
-        = "\"#{@lesson.subject.downcase}\""
+        = "\"#{(@lesson.specific_subject || @lesson.subject).downcase}\""
         or an expert.
       %p.small (we actually prefer to get lessons from people who are just starting out, but we appreciate experts as well)
       %p Just try to be honest about your skill level so others will know what to expect. 
@@ -119,6 +119,19 @@
             = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
             .small= simple_format(truncate(video.title, :length => 90))
         %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
+
+        %br
+
+        %h3 Photos / Images / Drawings
+        - if @lesson.photos.empty?
+          %p.small You haven't yet added any photos/images/drawings to your lesson.
+        - @lesson.photos.each do |photo|
+          .photo_thumbnail
+            = link_to(image_tag(photo.image.url(:small)), photo.image.url(:large), :class => "lightbox")
+            = link_to(photo.title, image_tag(photo.image.url(:large)), :class => "lightbox")
+            .small= simple_format(truncate(photo.caption, :length => 90))
+
+        %p= link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
 
         %br
 

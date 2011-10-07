@@ -43,11 +43,11 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(params[:photo])
+    @photo = Photo.new(params[:photo].merge(:lesson => @lesson))
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to lesson_path(@lesson), notice: 'Photo was successfully created.' }
+        format.html { render "layouts/close_window" }
         format.json { render json: @photo, status: :created, location: @photo }
       else
         format.html { render action: "new" }

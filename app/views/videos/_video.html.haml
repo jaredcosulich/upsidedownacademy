@@ -1,0 +1,3 @@
+- width = size == :large ? "720" : "400"
+- height = size == :large ? "450" : "300"
+%iframe{:width => width, :height => height, :src => "http://www.youtube.com/embed/#{video.youtube_id}", :frameborder => "0", :allowfullscreen => "allowfullscreen"}

@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
 
   has_attached_file :image,
     PAPERCLIP_STORAGE_OPTIONS.merge(
-    :styles => { :large => "720x480", :normal => "270x180", :small => "120x120", :preview => "50x50#" },
+    :styles => { :large => "720x480", :normal => "270x180", :small => "120x120" },
     :default_style => :normal  ,
     :default_url => "/images/loading.gif"
     )
