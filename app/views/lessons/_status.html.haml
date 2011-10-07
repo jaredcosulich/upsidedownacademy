@@ -1,0 +1,9 @@
+- if @lesson.published_at.present?
+  %b Published:
+  = @lesson.published_at.strftime("%m/%d/%Y")
+- elsif lesson_owner?(@lesson)
+  %b Unpublished:
+  .publish_lesson
+    = form_for(@lesson) do |f|
+      = f.hidden_field :published_at, :value => Date.today
+      %a Publish lesson >

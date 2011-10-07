@@ -21,3 +21,6 @@ $ ->
     $.each($("input[data-hint]"), ->
       clearIfDefault(this)
     );
+
+  $(".publish_lesson a").click ->
+    $(this).closest("form").submit() if confirm("Are you sure you're ready to publish this lesson?")

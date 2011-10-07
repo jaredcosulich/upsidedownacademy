@@ -38,7 +38,14 @@
       %td
         %ul.small
           - @lessons[0..4].each do |lesson|
-            %li= "#{link_to(lesson.full_title, lesson_path(lesson))} (#{link_to(lesson.user.display_name, profile_path(lesson.user))})".html_safe
+            %li
+              = lesson.subject
+              - unless lesson.specific_subject.blank?
+                \>
+                = lesson.specific_subject
+              \>
+              = link_to(lesson.title, lesson_path(lesson))
+              = "(#{link_to(lesson.user.display_name, profile_path(lesson.user))})".html_safe
       -#
         %td
           %h4 Browse Subjects

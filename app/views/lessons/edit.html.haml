@@ -2,9 +2,7 @@
   = render "devise/registrations/short_form" if current_user.nil?
 
   .right.text_right
-    %p
-      %b Lesson Status:
-      = @lesson.published_at.nil? ? "Not Published" : "Published"
+    = render "lessons/status"
     %p= link_to("View lesson >", lesson_path(@lesson))
 
 = render "lessons/lesson_header"

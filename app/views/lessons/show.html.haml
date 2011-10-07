@@ -10,12 +10,7 @@
 
   .lesson_info
     .right
-      - if @lesson.published_at.present?
-        %b Published:
-        = @lesson.published_at.strftime("%m/%d/%Y")
-      - elsif lesson_owner?(@lesson)
-        %b Unpublished:
-        = link_to("Publish lesson >", "")
+      = render "lessons/status"
 
     %b Created by:
     %span.normal= lesson_owner(@lesson)
