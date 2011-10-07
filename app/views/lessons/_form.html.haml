@@ -151,7 +151,7 @@
       %h3 Last Step: Your Lesson
       .small Even if you're doing a video, please write out as much of your lesson as possible.
       %p.small It's easier for people to search text than to scan/search through a video.  
-      = f.text_area :body
+      = f.text_area :body, :style => "width: 450px;"
 
     .add
       %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")

@@ -9,6 +9,14 @@
   %h2= @lesson.title
 
   .lesson_info
+    .right
+      - if @lesson.published_at.present?
+        %b Published:
+        = @lesson.published_at.strftime("%m/%d/%Y")
+      - elsif lesson_owner?(@lesson)
+        %b Unpublished:
+        = link_to("Publish lesson >", "")
+
     %b Created by:
     %span.normal= lesson_owner(@lesson)
 
@@ -20,16 +28,15 @@
       = "#{(@lesson.specific_subject || @lesson.subject).downcase}:"
     = @lesson.confidence_text
 
-  .photos_and_videos.right
+  .photos_and_videos.right    
     - if @lesson.videos.empty? && @lesson.photos.empty?
-      %h3 Videos & Images
       %p No videos or images have been added to this lesson.
 
     - @lesson.videos.each do |video|
       .video
         %h4
           = video.title
-          %span.small= link_to("View larger video >", lesson_video_path(@lesson, video), :class => "lightbox")
+          %span.small= link_to("View&nbsp;larger&nbsp;video&nbsp;>".html_safe, lesson_video_path(@lesson, video), :class => "lightbox")
         = render "videos/video", :video => video, :size => :medium
         .small= simple_format(video.caption)
 
@@ -40,7 +47,6 @@
         .small= simple_format(photo.caption)
 
   .lesson_text
-    %h3 Lesson:
-    = simple_format(@lesson.body)
+    = simple_format(@lesson.body.html_safe).html_safe
 
 
