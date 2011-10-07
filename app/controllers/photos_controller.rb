@@ -79,7 +79,7 @@ class PhotosController < ApplicationController
     @photo.destroy
 
     respond_to do |format|
-      format.html { redirect_to lesson_path(@lesson) }
+      format.html { redirect_to edit_lesson_path(@lesson) }
       format.json { head :ok }
     end
   end

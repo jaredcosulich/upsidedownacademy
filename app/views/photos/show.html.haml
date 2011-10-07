@@ -1,10 +1,5 @@
-%p
-  %b Lesson:
-  = @photo.lesson_id
-%p
-  %b Title:
-  = @photo.title
-%p
-  %b Caption:
-  = @photo.caption
-= link_to 'Edit', edit_lesson_photo_path(@lesson, @photo)
+%h2= @photo.title
+
+= link_to(image_tag(@photo.image.url(:large)), @photo.image.url(:original), :target => "_blank")
+
+= simple_format(@photo.caption)

@@ -33,7 +33,7 @@
       - @lesson.photos.each do |photo|
         .photo
           %h4= photo.title
-          = link_to(image_tag(photo.image.url), photo.image.url(:large))
+          = link_to(image_tag(photo.image.url), lesson_photo_path(@lesson, photo), :class => "lightbox")
           .small= simple_format(photo.caption)
 
   %h4 Lesson:

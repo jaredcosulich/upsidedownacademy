@@ -115,6 +115,8 @@
               = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
               = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
               .small= simple_format(truncate(video.caption, :length => 90))
+              .links.small.clear.right
+                = link_to("delete", lesson_video_path(@lesson, video), :method => :delete, :confirm => "Are you sure you want to delete this video?")
           = link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
 
         .section
@@ -126,6 +128,8 @@
               = link_to(image_tag(photo.image.url(:small)), photo.image.url(:large), :class => "lightbox")
               = link_to(photo.title, photo.image.url(:large), :class => "lightbox")
               .small= simple_format(truncate(photo.caption, :length => 90))
+              .links.small.clear.right
+                = link_to("delete", lesson_photo_path(@lesson, photo), :method => :delete, :confirm => "Are you sure you want to delete this photo/image/drawing?")
 
           = link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
 
