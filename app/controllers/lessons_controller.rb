@@ -1,5 +1,5 @@
 class LessonsController < ApplicationController
-
+  before_filter :verify_owner, :only => [:edit, :update, :destroy]
 
   # GET /lessons
   # GET /lessons.json
@@ -40,10 +40,6 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1/edit
   def edit
-    @lesson = Lesson.find(params[:id])
-    if !user_signed_in? && @lesson.user_id.nil?
-      session[:user_return_to] = edit_lesson_path(@lesson)
-    end
   end
   
   # POST /lessons
@@ -93,6 +89,20 @@ class LessonsController < ApplicationController
       format.html { redirect_to lessons_url }
       format.json { head :ok }
     end
+  end
+
+  private
+  def verify_owner
+    @lesson = Lesson.find(params[:id])
+    if (
+      (user_signed_in? && @lesson.user_id != current_user.id) ||
+      (!user_signed_in? && (cookies["unclaimed_lessons"] || "").split(",").index(@lesson.id.to_s).nil?)
+    )
+      session[:user_return_to] = edit_lesson_path(@lesson)
+      redirect_to new_user_session_path and return false
+    end
+
+    return true
   end
 
 end

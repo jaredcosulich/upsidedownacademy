@@ -1,2 +1,4 @@
+= render "devise/registrations/short_form" if current_user.nil? && @lesson.title.present?
+
 = render "lessons/lesson_header"
 = render 'form'

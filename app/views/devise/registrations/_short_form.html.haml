@@ -1,32 +1,33 @@
-.must_register.highlighted
-  = form_for(:user, :url => registration_path(:user)) do |f|
-    %h3
-      Please Register An Account Or
-      = link_to("Log In", new_user_session_path)
-    %p Your lesson will not be saved until you register an account.
-    %table.registration_fields.small
-      %tr
-        %td
-          = f.label :name, "Your Name:"
-        %td.field
-          = f.text_field :name
-        %td
-          = f.label :nickname, "Nickname (optional):"
-        %td.field
-          = f.text_field :nickname
-        %td
-          = f.label :email, "Your Email:"
-        %td.field
-          = f.email_field :email
-      %tr
-        %td
-          = f.label :password, "Password:"
-        %td.field
-          = f.password_field :password
-        %td
-          = f.label :password_confirmation, "Password Confirmation:"
-        %td.field
-          = f.password_field :password_confirmation
-        %td{:colspan => 2, :style => "text-align: left;"}
-          = f.submit "Register Your Account"
+.must_register
+  .highlighted
+    = form_for(:user, :url => registration_path(:user)) do |f|
+      %h3
+        Please Register An Account Or
+        = link_to("Log In", new_user_session_path)
+      %p Your lesson will not be saved until you register an account.
+      %table.registration_fields.small
+        %tr
+          %td
+            = f.label :name, "Your Name:"
+          %td.field
+            = f.text_field :name
+          %td
+            = f.label :nickname, "Nickname (optional):"
+          %td.field
+            = f.text_field :nickname
+          %td
+            = f.label :email, "Your Email:"
+          %td.field
+            = f.email_field :email
+        %tr
+          %td
+            = f.label :password, "Password:"
+          %td.field
+            = f.password_field :password
+          %td
+            = f.label :password_confirmation, "Password Confirmation:"
+          %td.field
+            = f.password_field :password_confirmation
+          %td{:colspan => 2, :style => "text-align: left;"}
+            = f.submit "Register Your Account"
 

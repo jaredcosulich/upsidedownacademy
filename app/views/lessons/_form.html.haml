@@ -128,7 +128,7 @@
         - @lesson.photos.each do |photo|
           .photo_thumbnail
             = link_to(image_tag(photo.image.url(:small)), photo.image.url(:large), :class => "lightbox")
-            = link_to(photo.title, image_tag(photo.image.url(:large)), :class => "lightbox")
+            = link_to(photo.title, photo.image.url(:large), :class => "lightbox")
             .small= simple_format(truncate(photo.caption, :length => 90))
 
         %p= link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
