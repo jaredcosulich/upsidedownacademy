@@ -105,10 +105,6 @@
       
   - else
     .right
-      .example_lesson_info
-        %h3 Your Lesson
-        %p Please try to write out as much of your lesson as possible, even if you're including a video.
-        %p It's easier for people to search text than to search/scan through a video.
       .photos_and_videos_preview
         .section
           %h3 Videos
@@ -149,10 +145,8 @@
 
     .field
       %h3 Last Step: Your Lesson
-      .small
-        Even if you're doing a video lesson, please try to
-        %br
-        write out as much of your lesson as possible.
+      .small Even if you're doing a video, please write out as much of your lesson as possible.
+      %p.small It's easier for people to search text than to scan/search through a video.  
       = f.text_area :body
 
     .add

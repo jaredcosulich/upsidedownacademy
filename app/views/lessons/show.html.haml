@@ -1,7 +1,13 @@
 %p#notice= notice
 
+%p
+  = @lesson.subject
+  - if @lesson.specific_subject.present?
+    \>
+    = @lesson.specific_subject
+
 .lesson
-  %h2= @lesson.full_title
+  %h2= @lesson.title
 
   .lesson_info
     %b Created by:
@@ -18,18 +24,19 @@
   .photos_and_videos.right
     - unless @lesson.videos.empty?
       - @lesson.videos.each do |video|
-        %h4
-          = video.title
-          %span.small= link_to("View larger video >", lesson_video_path(@lesson, video), :class => "lightbox")
-        = render "videos/video", :video => video, :size => :medium
-        .small= simple_format(video.caption)
+        .video
+          %h4
+            = video.title
+            %span.small= link_to("View larger video >", lesson_video_path(@lesson, video), :class => "lightbox")
+          = render "videos/video", :video => video, :size => :medium
+          .small= simple_format(video.caption)
 
     - unless @lesson.photos.empty?
-      %h3 Images
       - @lesson.photos.each do |photo|
-        %h4= photo.title
-        = link_to(image_tag(photo.image.url), photo.image.url(:large))
-        .small= simple_format(photo.caption)
+        .photo
+          %h4= photo.title
+          = link_to(image_tag(photo.image.url), photo.image.url(:large))
+          .small= simple_format(photo.caption)
 
   %h4 Lesson:
   = simple_format(@lesson.body)
