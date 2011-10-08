@@ -1,8 +1,8 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
-  has_many :videos
-  has_many :photos
-  has_many :references
+  has_many :videos, :order => "id desc"
+  has_many :photos, :order => "id desc"
+  has_many :references, :order => "id desc"
 
   scope :recent, order("created_at desc")
   scope :published, where("published_at is not null")

@@ -1,7 +1,8 @@
 class YouTube
 
   def self.get_authorization_token
-    data = 'Email=youtube@upsidedownacademy.org&Passwd=thud5loop&service=youtube&source=UpsideDownAcademy'
+    dev = 'dev' unless Rails.env.production?
+    data = "Email=youtube#{dev}@upsidedownacademy.org&Passwd=thud5loop&service=youtube&source=UpsideDownAcademy#{dev.capitalize}"
     response = %x{curl --location https://www.google.com/accounts/ClientLogin --data '#{data}' --header 'Content-Type:application/x-www-form-urlencoded'}
     response.split(/\n/).last.gsub("Auth=", "")
   end
@@ -49,6 +50,5 @@ scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Education
   def self.post_video_file
 
   end
-
 
 end
