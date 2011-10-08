@@ -15,7 +15,7 @@
       = link_to(lesson.title, lesson_path(lesson))
       .small
         \- by
-        = lesson_owner(lesson)
+        = link_to(lesson_owner(lesson), profile_path(lesson.user))
 
 %br
 %p= link_to 'Create a new lesson >', new_lesson_path

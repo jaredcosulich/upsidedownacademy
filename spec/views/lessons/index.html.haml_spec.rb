@@ -23,10 +23,7 @@ describe "lessons/index.html.haml" do
 
   it "renders a list of lessons" do
     render
-    assert_select "td", :text => @user.display_name, :count => 2
-    assert_select "td", :text => "Subject".to_s, :count => 2
-    assert_select "td", :text => "Title".to_s, :count => 2
-    assert_select "td", :text => 10.to_s, :count => 1
-    assert_select "td", :text => 20.to_s, :count => 1
+    assert_select "a", :text => @user.display_name, :count => 2
+    assert_select "a", :text => "Title", :count => 2
   end
 end
