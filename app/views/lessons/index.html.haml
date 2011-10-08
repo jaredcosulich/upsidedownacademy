@@ -1,21 +1,21 @@
-%h1 Listing lessons
-%table
-  %tr
-    %th User
-    %th Subject
-    %th Title
-    %th Confidence score
-    %th
-    %th
-    %th
+.right.explanation_box
+  %h3 In Progress
+  %p We are working on more ways to explore and discover new lessons.
+  %p For the time being, though, here's a list of all lessons.
+
+%h2 All lessons
+
+%ul
   - @lessons.each do |lesson|
-    %tr
-      %td= lesson.user.display_name
-      %td= lesson.subject
-      %td= lesson.title
-      %td= lesson.confidence_score
-      %td= link_to 'Show', lesson
-      %td= link_to 'Edit', edit_lesson_path(lesson)
-      %td= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete
+    %li
+      = lesson.subject
+      - unless lesson.specific_subject.blank?
+        \>
+        = lesson.specific_subject
+      = link_to(lesson.title, lesson_path(lesson))
+      .small
+        \- by
+        = lesson_owner(lesson)
+
 %br
-= link_to 'New Lesson', new_lesson_path
+%p= link_to 'Create a new lesson >', new_lesson_path
