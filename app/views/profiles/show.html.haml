@@ -1,0 +1,15 @@
+%h2= "#{@user.display_name}'s Lessons"
+
+%ul
+  - @user.lessons.each do |lesson|
+    %li
+      = lesson.subject
+      - unless lesson.specific_subject.blank?
+        \>
+        = lesson.specific_subject
+      \>
+      = link_to(lesson.title, lesson_path(lesson))
+      .small
+        \- published
+        = lesson.created_at.strftime("%m/%d/%Y")
+

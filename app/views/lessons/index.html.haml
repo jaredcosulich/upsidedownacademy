@@ -12,6 +12,7 @@
       - unless lesson.specific_subject.blank?
         \>
         = lesson.specific_subject
+      \>
       = link_to(lesson.title, lesson_path(lesson))
       .small
         \- by

@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :nickname, :email, :password, :password_confirmation, :remember_me
 
+  scope :with_lessons, includes(:lessons).where("lessons.published_at is not null")
+
   def display_name
     nickname || name
   end
