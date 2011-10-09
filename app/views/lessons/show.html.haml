@@ -16,7 +16,7 @@
       = render "lessons/status"
 
     %b Created by:
-    %span.normal= lesson_owner(@lesson)
+    %span.normal= link_to_unless(@lesson.user.nil?, lesson_owner(@lesson), profile_path(@lesson.user))
 
     %br
 
@@ -64,3 +64,11 @@
             .small= simple_format(truncate(reference.comment, :length => 90))
     - if lesson_owner?(@lesson)
       %p= link_to("Add reference material for your lesson >", new_lesson_reference_path(@lesson), :class => "lightbox")
+
+  .comments
+    %h3 Comments On This Lesson
+    - @lesson.comments.each do |comment|
+      .comment
+        = simple_format(comment.text)
+        .small= "- from #{link_to(comment.user.display_name, profile_path(comment.user))}".html_safe
+    = render "comments/form"

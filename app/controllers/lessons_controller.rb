@@ -15,9 +15,10 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   # GET /lessons/1.json
   def show
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.with_videos.with_photos.with_references.with_comments.find(params[:id])
 
     if @lesson.complete?
+      session[:user_return_to] = lesson_path(@lesson)
       respond_to do |format|
         format.html
         format.json { render json: @lesson }

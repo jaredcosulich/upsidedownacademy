@@ -1,8 +1,5 @@
 Upsidedownacademy::Application.routes.draw do
 
-
-  resources :comments
-
   match 'assign_youtube_id/:video_id' => 'videos#assign_youtube_id', :as => :assign_youtube_id
 
   devise_for :users
@@ -21,6 +18,7 @@ Upsidedownacademy::Application.routes.draw do
     end
     resources :photos
     resources :references
+    resources :comments
   end
   
   root :to => 'home#index'

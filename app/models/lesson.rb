@@ -3,9 +3,14 @@ class Lesson < ActiveRecord::Base
   has_many :videos, :order => "id desc"
   has_many :photos, :order => "id desc"
   has_many :references, :order => "id desc"
+  has_many :comments
 
   scope :recent, order("created_at desc")
   scope :published, where("published_at is not null")
+  scope :with_videos, includes(:videos)
+  scope :with_photos, includes(:photos)
+  scope :with_references, includes(:references)
+  scope :with_comments, includes(:comments)
 
   CONFIDENCE_SCORES = [
     ["Just getting started, basically no idea what I'm doing.", 0],

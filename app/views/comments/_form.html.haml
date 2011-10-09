@@ -1,0 +1,24 @@
+- @comment = @lesson.comments.new if @comment.nil?
+= form_for(@comment, :url => lesson_comments_path(@lesson)) do |f|
+  - if user_signed_in?
+    - if @comment.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@comment.errors.count, "error")
+          prohibited this comment from being saved:
+        %ul
+          - @comment.errors.full_messages.each do |msg|
+            %li= msg
+    .field
+      = f.label :text, "Post a comment about this lesson."
+      .small (Please keep it cordial. Everyone here is just trying to learn.)
+      = f.text_area :text
+    .actions
+      = f.submit "Post Comment"
+  - else
+    %p
+      Please
+      = link_to("log in", new_user_session_path)
+      of
+      = link_to("register a new account", new_user_registration_path)
+      to post a comment.
