@@ -1,3 +1,6 @@
+- @title = "#{@lesson.title} - #{@lesson.subject} > #{@lesson.specific_subject}"
+- @description = truncate(@lesson.body, :length => 300)
+
 %p
   = @lesson.subject
   - if @lesson.specific_subject.present?

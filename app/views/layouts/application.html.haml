@@ -1,7 +1,9 @@
 !!!
 %html
   %head
-    %title ∩pside Down ∀cademy
+    %title= [@title, "∩pside Down ∀cademy"].compact.join(" - ")
+    %meta{:name => "description", :content => @description || "The best way to learn is to try and teach. The Goal: Make it easier / more fun for the next person to learn what ever you are learning right now."}
+
     = stylesheet_link_tag :application
     = javascript_include_tag :application
     = csrf_meta_tag
