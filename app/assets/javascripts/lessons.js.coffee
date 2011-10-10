@@ -1,4 +1,5 @@
 $ ->
+  self = this;
   setDefault = (input)->
     input = $(input)
     input.val(input.attr("data-hint")) if input.val().length == 0
@@ -8,6 +9,10 @@ $ ->
     if $(input).val() == $(input).attr("data-hint")
       $(input).val("")
       $(input).removeClass("hinted")
+
+  setUnsavedWarning = ->
+    window.onbeforeunload = ->
+      "You may have unsaved changes. Are you sure you want to leave this page?";
 
 
   $("input[data-hint]").focus ->
@@ -24,3 +29,11 @@ $ ->
 
   $(".publish_lesson a").click ->
     $(this).closest("form").submit() if confirm("Are you sure you're ready to publish this lesson?")
+
+  $(".monitor_changes").keypress ->
+    setUnsavedWarning()
+  $(".monitor_changes").change ->
+    setUnsavedWarning()
+
+
+
