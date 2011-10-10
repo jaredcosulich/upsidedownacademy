@@ -36,7 +36,7 @@ class Lesson < ActiveRecord::Base
 
   def confidence_text
     score = CONFIDENCE_SCORES.detect { |score_info| score_info[1] == confidence_score }
-    score.nil? ? "" : "#{score[0]} (#{score[1]})"
+    score.nil? ? "" : "#{score[0]} (#{score[1]}/100)"
   end
 
   def to_param
