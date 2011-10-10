@@ -159,18 +159,10 @@
       %p.small It's easier for people to search text than to scan/search through a video.  
       = f.text_area :body, :style => "width: 450px;"
 
-    .add
-      %p= link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
-      %p= link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
-      %p= link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
-
-
   .actions
-    %p= f.submit "Save And Continue"
-    - unless @lesson.new_record?
-      %p.small
-        You can change any of this information at any time.
-        %br
-        To change it now just click on the information above.
+    - if @lesson.title.present?
+      %p.text_center= f.submit "Save Lesson"
+    - else
+      %p= f.submit "Save And Continue"
 
 = render "devise/registrations/short_form" if current_user.nil?

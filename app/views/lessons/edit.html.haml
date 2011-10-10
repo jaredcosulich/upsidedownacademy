@@ -4,6 +4,7 @@
   = render "devise/registrations/short_form" if current_user.nil?
 
   .right.text_right
+    %br
     = render "lessons/status"
     %p= link_to("View lesson >", lesson_path(@lesson))
 
