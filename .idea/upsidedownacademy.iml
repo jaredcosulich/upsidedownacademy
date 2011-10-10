@@ -217,6 +217,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] paperclip (v2.4.3, /Users/jaredcosulich/.rvm/gems/ruby-1.9.2-p0@upsidedownacademy/gems/paperclip-2.4.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] xml-simple (v1.1.0, /Users/jaredcosulich/.rvm/gems/ruby-1.9.2-p0@upsidedownacademy/gems/xml-simple-1.1.0)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] cocaine (v0.2.0, /Users/jaredcosulich/.rvm/gems/ruby-1.9.2-p0@upsidedownacademy/gems/cocaine-0.2.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] airbrake (v3.0.4, /Users/jaredcosulich/.rvm/gems/ruby-1.9.2-p0@upsidedownacademy/gems/airbrake-3.0.4)" level="application" />
   </component>
 </module>
 
