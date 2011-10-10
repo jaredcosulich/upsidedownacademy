@@ -154,13 +154,15 @@
           = link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
 
     .field
-      %h3 Last Step: Your Lesson
-      .small Even if you're doing a video, please write out as much of your lesson as possible.
-      %p.small It's easier for people to search text than to scan/search through a video.  
+      %h3 Lesson Text
+      .small Please write out as much of your lesson as possible, even if you're doing a video.
+      %p.small It's easier for people to scan/search text than to scan/search through a video.  
       = f.text_area :body, :style => "width: 450px;"
 
   .actions
     - if @lesson.title.present?
+      %p.text_center.small
+        (Please remember to save often. We don't yet have a good way to recover your lesson if something goes wrong.)
       %p.text_center= f.submit "Save Lesson"
     - else
       %p= f.submit "Save And Continue"
