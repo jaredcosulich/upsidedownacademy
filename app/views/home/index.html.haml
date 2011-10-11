@@ -1,3 +1,22 @@
+.for_who
+  .section
+    %h2 For Teachers
+    %p.small Have your students create lessons teaching others what they are learning.
+    %p.small The change from "learning" to "teaching" will help them better analyze their own learning
+    %p.small= link_to("Read more >", for_teachers_about_index_path)
+  .section
+    %h2 For Students
+    %p.small Can you find a way to make what you're learning easier / more fun for someone else to learn?
+    %p.small Just pretend your helping your younger sibling learn something. How would you do it?
+    %p.small= link_to("Read more >", for_students_about_index_path)
+  .section.last
+    %h2 For Everyone
+    %p.small Did you learn something new today? Create a lesson and make it easier for everyone else.
+    %p.small Or learn something new through the lessons other people have created on this site.
+    %p.small= link_to("Read more >", for_everyone_about_index_path)
+
+.separator
+  
 %ol.site_instructions
   %li Learn something.
   %li Pay attention to what you find confusing.
@@ -5,6 +24,8 @@
   %li It can be a blog post, video, dance, song, smoke signal, what ever.
   %li= link_to("Create a lesson and make it a little easier for the next person >", new_lesson_path)
 
+.separator
+  
 .why
   %h4 Why Should I Create A Lesson?
   No matter how experienced you are in a subject or skill,
