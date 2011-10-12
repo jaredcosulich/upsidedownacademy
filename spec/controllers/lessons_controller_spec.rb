@@ -40,6 +40,13 @@ describe LessonsController do
       @lesson = Factory(:lesson, :user => nil)
     end
 
+    it "should set the user_return_to session variable if the user is not signed in" do
+      request.cookies["unclaimed_lessons"] = @lesson.id.to_s
+      get :edit, :id => @lesson.id.to_s
+      response.should be_success
+      request.session[:user_return_to].should == edit_lesson_path(@lesson)
+    end
+
     it "doesn't allow you to edit if you're not the owner and it's not in your cookies" do
       get :edit, :id => @lesson.id.to_s
 
