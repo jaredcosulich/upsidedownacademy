@@ -12,7 +12,8 @@ $ ->
 
   setUnsavedWarning = ->
     window.onbeforeunload = ->
-      "You may have unsaved changes. Are you sure you want to leave this page?";
+      if !window.saving
+        "You may have unsaved changes. Are you sure you want to leave this page?";
 
 
   $("input[data-hint]").focus ->
@@ -23,6 +24,7 @@ $ ->
     setDefault(this)
 
   $("form").submit ->
+    window.saving = true
     $.each($("input[data-hint]"), ->
       clearIfDefault(this)
     );
