@@ -6,7 +6,7 @@
   .right.text_right
     %br
     = render "lessons/status"
-    %p= link_to("View lesson >", lesson_path(@lesson))
+    %p= link_to("View lesson >", lesson_path(@lesson)) if @lesson.body.present?
 
 = render "lessons/lesson_header"
 
