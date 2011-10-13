@@ -48,7 +48,7 @@
         .small= simple_format(photo.caption)
 
   .lesson_text
-    = simple_format(@lesson.body.html_safe).html_safe
+    = simple_format(@lesson.body).html_safe
 
 
   .references
@@ -61,7 +61,7 @@
         - @lesson.references.each do |reference|
           %li
             = link_to_unless(reference.url.blank?, reference.title, reference.url, :target => "_blank")
-            .small= simple_format(truncate(reference.comment, :length => 90))
+            .small= simple_format(reference.comment)
     - if lesson_owner?(@lesson)
       %p= link_to("Add reference material for your lesson >", new_lesson_reference_path(@lesson), :class => "lightbox")
 
