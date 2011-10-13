@@ -2,7 +2,7 @@ class YouTube
 
   def self.get_authorization_token
     dev = 'dev' unless Rails.env.production?
-    data = "Email=youtube#{dev}@upsidedownacademy.org&Passwd=thud5loop&service=youtube&source=UpsideDownAcademy#{dev.capitalize}"
+    data = "Email=youtube#{dev}@upsidedownacademy.org&Passwd=thud5loop&service=youtube&source=UpsideDownAcademy#{dev.capitalize unless dev.nil?}"
     response = %x{curl --location https://www.google.com/accounts/ClientLogin --data '#{data}' --header 'Content-Type:application/x-www-form-urlencoded'}
     response.split(/\n/).last.gsub("Auth=", "")
   end
