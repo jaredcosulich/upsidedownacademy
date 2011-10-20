@@ -42,6 +42,11 @@ class LessonsController < ApplicationController
   # GET /lessons/1/edit
   def edit
     session[:user_return_to] = edit_lesson_path(@lesson) unless user_signed_in?
+    if @lesson.subject.blank?
+      flash[:notice] = "Please provide a subject for your lesson"
+    elsif @lesson.subject.blank?
+      flash[:notice] = "Please provide a title for your lesson"
+    end
   end
   
   # POST /lessons

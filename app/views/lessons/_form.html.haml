@@ -8,40 +8,44 @@
         - @lesson.errors.full_messages.each do |msg|
           %li= msg
 
-  - if @lesson.subject.blank? || params.include?(:edit_subject)
+  - if @lesson.subject.blank? || @lesson.title.blank? || params.include?(:edit_title)
     .right.example_lesson_info
-      %h3 Example Subjects / Skills
-      %p You can try to teach any subject or skill.
+      %h3 Lesson Info
+      %p You can create a lesson for anything.
       %p Some examples:
-      .right{:style => "margin-right: 30px;"}
-        %h4 Specific Subjects
-        %ul
-          %li Algebra
-          %li Frying an egg
-          %li Hitting a baseball
-          %li Grammar
-          %li Salsa dancing
-          %li Speed reading
-          %li Chemistry
-          %li etc
 
-      %h4 General Subjects
       %ul
-        %li Math
-        %li Cooking
-        %li Baseball
-        %li English
-        %li Dancing
-        %li Reading
-        %li Science
-        %li etc
+        %li
+          %b General Subject
+          %br
+          Specific Subject > Title
+        %li
+          %b Math
+          %br
+          Algebra > Solving a simple equation
+        %li
+          %b Cooking
+          %br
+          Frying an egg > How to flip the egg
+        %li
+          %b English
+          %br
+          Grammar > How to use commas
+        %li
+          %b Sports
+          %br
+          Baseball > How to throw a curveball
+
+
 
     .field
-      %h3 Step 1 (of 4): Lesson Subject
+      %h3 Lesson Info
+      .small (don't worry too much about this, just try to fill everything in)
+
+      %br
+        
       %p
         = f.label :subject, "What subject or skill are you trying to learn / teach?"
-        %br
-        %span.small (don't worry too much about this, just try to fill them in)
       %p
         = f.label :subject, "General Subject:"
         = f.text_field :subject, "data-hint" => 'e.g. "Math" or "Cooking"'
@@ -49,60 +53,28 @@
         = f.label :specific_subject, "Specific Subject:"
         = f.text_field :specific_subject, "data-hint" => 'e.g. "Algebra" or "Frying An Egg"'
 
-  - elsif @lesson.confidence_score.blank? || params.include?(:edit_confidence)
+      %br
+
+      %p
+        = f.label :subject, "What do you want to title your lesson?"
+      %p
+        = f.label :title, "Title:"
+        = f.text_field :title, "data-hint" => 'e.g. "How to flip the egg"'
+
+
+    .clear
     .right.example_lesson_info
       %h3 Confidence Level
       %p
-        It doesn't matter if you're a complete novice at
-        = "\"#{(@lesson.specific_subject || @lesson.subject).downcase}\""
-        or an expert.
+        Novices and experts are all welcome.
       %p.small (we actually prefer to get lessons from people who are just starting out, but we appreciate experts as well)
       %p Just try to be honest about your skill level so others will know what to expect. 
 
     .field
-      %h3 Step 2 (of 4): Confidence Level
+      %h3 Confidence Level
       %p= f.label :confidence_score, "How confident are you at this subject / skill?"
       %p= f.select :confidence_score, Lesson::CONFIDENCE_SCORES
 
-  - elsif @lesson.title.blank? || params.include?(:edit_title)
-    .right.example_lesson_info
-      %h3 Lesson Title
-      %p It's best to create lessons that are short.
-      %p Try to break down your subject in to pieces so that you can teach them in smaller lessons.
-      %p Some examples:
-      %ul
-        %li
-          %p
-            Math: Algebra
-            %br
-            Title:
-            %b Solving a simple equation
-        %li
-          %p
-            Cooking: Frying an egg
-            %br
-            Title:
-            %b How to flip the egg
-        %li
-          %p
-            English: Grammar
-            %br
-            Title:
-            %b How to use commas
-        %li
-          %p
-            Golf: Striking The Ball
-            %br
-            Title:
-            %b How to put backspin on the ball
-
-    .field
-      %h3 Step 3 (of 4): Lesson Title
-      %p= f.label :title, "What do you want to title your lesson?"
-      %p
-        = f.label :title, "Title:"
-        = f.text_field :title, "data-hint" => 'e.g. "How to flip the egg"'
-      
   - else
     .right
       .photos_and_videos_preview
