@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :lessons
+  has_many :lessons, :order => "id desc"
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable

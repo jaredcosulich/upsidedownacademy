@@ -1,8 +1,8 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
-  has_many :videos, :order => "id desc"
-  has_many :photos, :order => "id desc"
-  has_many :references, :order => "id desc"
+  has_many :videos, :order => "id asc"
+  has_many :photos, :order => "id asc"
+  has_many :references, :order => "id asc"
   has_many :comments
 
   scope :recent, order("created_at desc")
@@ -37,6 +37,10 @@ class Lesson < ActiveRecord::Base
   def confidence_text
     score = CONFIDENCE_SCORES.detect { |score_info| score_info[1] == confidence_score }
     score.nil? ? "" : "#{score[0]} (#{score[1]}/100)"
+  end
+
+  def media
+    (videos + photos).sort_by(&:position)
   end
 
   def to_param
