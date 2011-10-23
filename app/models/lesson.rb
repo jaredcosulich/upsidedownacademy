@@ -19,7 +19,7 @@ class Lesson < ActiveRecord::Base
     ["Novice, I've got a long way to go, but I'm starting to feel comfortable.", 30],
     ["Some experience, getting the hang of things.", 40],
     ["I'm probably in the middle of the pack. I've got a decent idea what I'm doing.", 50],
-    ["Good experience, I probably know more than average.", 60],
+    ["Good experience, I'm making some good progress, but no where near an expert.", 60],
     ["Solid experience, not an expert, but I know what I'm doing.", 70],
     ["Probably not an expert yet, but I'm close. I've got a very good understanding.", 80],
     ["Expert, I know this in and out.. I won't lead you astray.", 90],

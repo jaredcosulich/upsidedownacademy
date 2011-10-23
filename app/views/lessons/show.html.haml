@@ -18,13 +18,9 @@
     %b Created by:
     %span.normal= link_to_unless(@lesson.user.nil?, lesson_owner(@lesson), profile_path(@lesson.user))
 
-    %br
-
-    %b
-      = "#{lesson_owner(@lesson)}'s"
-      confidence with
-      = "#{(@lesson.specific_subject || @lesson.subject).downcase}:"
-    = @lesson.confidence_text
+    %div{:style => "margin-top: 12px;"}
+      %b Confidence Level:
+      = @lesson.confidence_text
 
   .photos_and_videos.right    
     - if @lesson.videos.empty? && @lesson.photos.empty?
