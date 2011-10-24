@@ -37,7 +37,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/1/edit
   def edit
-    @photo = Photo.find(params[:id])
+    @photo = @lesson.photos.find(params[:id])
   end
 
   # POST /photos
@@ -59,11 +59,11 @@ class PhotosController < ApplicationController
   # PUT /photos/1
   # PUT /photos/1.json
   def update
-    @photo = Photo.find(params[:id])
+    @photo = @lesson.photos.find(params[:id])
 
     respond_to do |format|
       if @photo.update_attributes(params[:photo])
-        format.html { redirect_to lesson_path(@lesson), notice: 'Photo was successfully updated.' }
+        format.html { render "layouts/close_window" }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
