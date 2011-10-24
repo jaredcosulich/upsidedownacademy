@@ -26,8 +26,8 @@
     - if @lesson.videos.empty? && @lesson.photos.empty?
       %p No videos or images have been added to this lesson.
       - if lesson_owner?(@lesson)
-        %p= link_to("Add a video to your lesson >", new_lesson_video_path(@lesson), :class => "lightbox")
-        %p= link_to("Add a photo/image/drawing to your lesson >", new_lesson_photo_path(@lesson), :class => "lightbox")
+        %p= link_to("Edit your lesson to add a video >", edit_lesson_path(@lesson))
+        %p= link_to("Edit your lesson to add a photo/image/drawing >", edit_lesson_path(@lesson))
 
     - @lesson.media.each do |media|
       - if media.is_a?(Video)

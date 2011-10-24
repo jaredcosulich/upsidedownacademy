@@ -1,4 +1,4 @@
-= form_for(@video, :url => lesson_videos_path) do |f|
+= form_for(@video, :url => (@video.new_record? ? lesson_videos_path(@lesson) : lesson_video_path(@lesson, @video)), :method => (@video.new_record? ? :post : :put)) do |f|
   - if @video.errors.any?
     #error_explanation
       %h2

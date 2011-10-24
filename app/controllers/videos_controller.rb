@@ -26,7 +26,7 @@ class VideosController < ApplicationController
 
   # GET /videos/1/edit
   def edit
-    @video = Video.find(params[:id])
+    @video = @lesson.videos.find(params[:id])
   end
 
   # POST /videos
@@ -66,11 +66,11 @@ class VideosController < ApplicationController
   # PUT /videos/1
   # PUT /videos/1.json
   def update
-    @video = Video.find(params[:id])
+    @video = @lesson.videos.find(params[:id])
 
     respond_to do |format|
       if @video.update_attributes(params[:video])
-        format.html { redirect_to @video, notice: 'Video was successfully updated.' }
+        format.html { render "layouts/close_window" }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
