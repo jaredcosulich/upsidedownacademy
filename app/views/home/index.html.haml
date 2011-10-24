@@ -1,19 +1,28 @@
 .for_who
-  .section
-    %h2 For Teachers
-    %p.small Have your students create lessons trying to teach others what you are teaching them.
-    %p.small The transition from "learning" to "teaching" can dramatically impact their learning and engagement.
-    %p.small= link_to("Read more >", for_teachers_about_index_path)
-  .section
-    %h2 For Students
-    %p.small Can you find a way to make what you're learning easier / more fun for someone else to learn?
-    %p.small Just pretend you're helping your younger sibling learn something. How would you do it?
-    %p.small= link_to("Read more >", for_students_about_index_path)
-  .section.last
-    %h2 For Everyone
-    %p.small Did you learn something new today? Create a lesson and make it easier for everyone else.
-    %p.small Or learn something new through the lessons other people have created on this site.
-    %p.small= link_to("Read more >", for_everyone_about_index_path)
+  .section.tip
+    %h2
+      For Teachers
+      %a.toggle_tip.small Learn more >
+    .tip_text{:style => "display: none;"}
+      %p.small Every time your students learn something new have them try to teach it to someone else.
+      %p.small The transition from "learning" to "teaching" can dramatically impact their learning and engagement.
+      %p.small= link_to("Read more >", for_teachers_about_index_path)
+  .section.tip
+    %h2
+      For Students
+      %a.toggle_tip.small Learn more >
+    .tip_text{:style => "display: none;"}
+      %p.small Can you find a way to make what you're learning easier / more fun for someone else to learn?
+      %p.small Just pretend you're helping your younger sibling learn something. How would you do it?
+      %p.small= link_to("Read more >", for_students_about_index_path)
+  .section.tip.last
+    %h2
+      For Everyone
+      %a.toggle_tip.small Learn more >
+    .tip_text{:style => "display: none;"}
+      %p.small Did you learn something new today? Create a lesson and make it easier for everyone else.
+      %p.small Or learn something new through the lessons other people have created on this site.
+      %p.small= link_to("Read more >", for_everyone_about_index_path)
 
 .separator
   
