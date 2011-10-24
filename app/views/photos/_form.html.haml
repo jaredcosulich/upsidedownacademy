@@ -23,15 +23,26 @@
     %p
       = f.label :title
       = f.text_field :title
+
   .field
     %p
       = f.label :image
       = f.file_field :image
+
+  .field
+    %p
+      = f.label :position, "Position relative to other photos & videos:"
+      = f.number_field :position, :size => 2
+      %br
+      %span{:style => "line-height: 1.5em; font-size: smaller"}
+        (a 1 will make it show up before all other photos or videos)
+
   .field
     %p
       = f.label :caption
       %br
       = f.text_area :caption
+
   .field
     %p.save_photo= f.submit "Save Photo"
     %p.saving_message.small{:style => "display: none;"}

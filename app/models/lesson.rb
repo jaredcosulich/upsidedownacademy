@@ -40,7 +40,7 @@ class Lesson < ActiveRecord::Base
   end
 
   def media
-    (videos + photos).sort_by(&:position)
+    (videos + photos).sort_by { |media| media.position || 9999 }
   end
 
   def to_param

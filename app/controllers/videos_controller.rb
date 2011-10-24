@@ -46,7 +46,7 @@ class VideosController < ApplicationController
   end
 
   def upload
-    @video = Video.find(params[:id])
+    @video = @lesson.videos.find(params[:id])
     @form_info = @video.setup_youtube(url_for(@lesson))
   end
 
@@ -82,7 +82,7 @@ class VideosController < ApplicationController
   # DELETE /videos/1
   # DELETE /videos/1.json
   def destroy
-    @video = Video.find(params[:id])
+    @video = @lesson.videos.find(params[:id])
     @video.destroy
 
     respond_to do |format|

@@ -82,7 +82,7 @@ describe PhotosController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested photo" do
-        photo = Photo.create! valid_attributes
+        photo = @lesson.photos.create! valid_attributes
         # Assuming there are no other photos in the database, this
         # specifies that the Photo created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -92,21 +92,21 @@ describe PhotosController do
       end
 
       it "assigns the requested photo as @photo" do
-        photo = Photo.create! valid_attributes
+        photo = @lesson.photos.create! valid_attributes
         put :update, :lesson_id => @lesson.id.to_s, :id => photo.id, :photo => valid_attributes
         assigns(:photo).should eq(photo)
       end
 
       it "redirects to the photo" do
-        photo = Photo.create! valid_attributes
+        photo = @lesson.photos.create! valid_attributes
         put :update, :lesson_id => @lesson.id.to_s, :id => photo.id, :photo => valid_attributes
-        response.should redirect_to(lesson_path(@lesson))
+        response.should be_success
       end
     end
 
     describe "with invalid params" do
       it "assigns the photo as @photo" do
-        photo = Photo.create! valid_attributes
+        photo = @lesson.photos.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Photo.any_instance.stub(:save).and_return(false)
         put :update, :lesson_id => @lesson.id.to_s, :id => photo.id.to_s, :photo => {}
@@ -114,7 +114,7 @@ describe PhotosController do
       end
 
       it "re-renders the 'edit' template" do
-        photo = Photo.create! valid_attributes
+        photo = @lesson.photos.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Photo.any_instance.stub(:save).and_return(false)
         put :update, :lesson_id => @lesson.id.to_s, :id => photo.id.to_s, :photo => {}
@@ -125,14 +125,14 @@ describe PhotosController do
 
   describe "DELETE destroy" do
     it "destroys the requested photo" do
-      photo = Photo.create! valid_attributes
+      photo = @lesson.photos.create! valid_attributes
       expect {
         delete :destroy, :lesson_id => @lesson.id.to_s, :id => photo.id.to_s
       }.to change(Photo, :count).by(-1)
     end
 
     it "redirects to the photos list" do
-      photo = Photo.create! valid_attributes
+      photo = @lesson.photos.create! valid_attributes
       delete :destroy, :lesson_id => @lesson.id.to_s, :id => photo.id.to_s
       response.should redirect_to(edit_lesson_path(@lesson))
     end

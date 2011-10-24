@@ -78,38 +78,46 @@
   - else
     .right
       .photos_and_videos_preview
+        - unless @lesson.media.empty?
+          .section
+            %h3 Media
+            - @lesson.media.each do |media|
+              - if media.is_a?(Video)
+                - video = media
+                .video_thumbnail
+                  - if video.created_at > 30.minutes.ago
+                    %p.small.text_center
+                      It may take up to an hour for YouTube to process your video.
+
+                  = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
+                  = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
+                  .small= simple_format(truncate(video.caption, :length => 90))
+                  .links.small.clear.right
+                    = link_to("edit", edit_lesson_video_path(@lesson, video), :class => "lightbox")
+                    &nbsp; &nbsp; &nbsp;
+                    = link_to("delete", lesson_video_path(@lesson, video), :method => :delete, :confirm => "Are you sure you want to delete this video?")
+              - else
+                - photo = media
+                .photo_thumbnail
+                  = link_to(image_tag(timestamped(photo.image.url(:small), photo)), photo.image.url(:large), :class => "lightbox")
+                  = link_to(photo.title, photo.image.url(:large), :class => "lightbox")
+                  .small= simple_format(truncate(photo.caption, :length => 90))
+                  .links.small.clear.right
+                    = link_to("edit", edit_lesson_photo_path(@lesson, photo), :class => "lightbox")
+                    &nbsp; &nbsp; &nbsp;
+                    = link_to("delete", lesson_photo_path(@lesson, photo), :method => :delete, :confirm => "Are you sure you want to delete this photo/image/drawing?")
+
         .section
           %h3 Videos
           - if @lesson.videos.empty?
             %p.small You haven't yet added any videos to your lesson.
-          - @lesson.videos.each do |video|
-            .video_thumbnail
-              - if video.created_at > 30.minutes.ago
-                %p.small.text_center
-                  It may take up to an hour for YouTube to process your video.
-                
-              = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
-              = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
-              .small= simple_format(truncate(video.caption, :length => 90))
-              .links.small.clear.right
-                = link_to("edit", edit_lesson_video_path(@lesson, video), :class => "lightbox")
-                &nbsp; &nbsp; &nbsp;
-                = link_to("delete", lesson_video_path(@lesson, video), :method => :delete, :confirm => "Are you sure you want to delete this video?")
+
           = link_to("Add a video to your lesson", new_lesson_video_path(@lesson), :class => "lightbox")
 
         .section
           %h3 Photos / Images / Drawings
           - if @lesson.photos.empty?
             %p.small You haven't yet added any photos/images/drawings to your lesson.
-          - @lesson.photos.each do |photo|
-            .photo_thumbnail
-              = link_to(image_tag(timestamped(photo.image.url(:small), photo)), photo.image.url(:large), :class => "lightbox")
-              = link_to(photo.title, photo.image.url(:large), :class => "lightbox")
-              .small= simple_format(truncate(photo.caption, :length => 90))
-              .links.small.clear.right
-                = link_to("edit", edit_lesson_photo_path(@lesson, photo), :class => "lightbox")
-                &nbsp; &nbsp; &nbsp;
-                = link_to("delete", lesson_photo_path(@lesson, photo), :method => :delete, :confirm => "Are you sure you want to delete this photo/image/drawing?")
 
           = link_to("Add a photo/image/drawing to your lesson", new_lesson_photo_path(@lesson), :class => "lightbox")
 
