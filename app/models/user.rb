@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   scope :with_lessons, includes(:lessons).where("lessons.published_at is not null")
 
+  after_create :welcome
+
   def display_name
     nickname || name
   end
@@ -18,4 +20,11 @@ class User < ActiveRecord::Base
   def to_param
     id.to_obfuscated
   end
+
+  private
+
+  def welcome
+    UserMailer.welcome(id).deliver    
+  end
+
 end

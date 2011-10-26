@@ -1,6 +1,6 @@
 class CommentMailer < ActionMailer::Base
 
-  default :from => "support@upsidedownacademy.org", :host => "upsidedownacademy.org"
+  default :from => "Upside Down Academy <support@upsidedownacademy.org>", :host => "upsidedownacademy.org"
 
   def notify_lesson_owner(comment_id)
     @comment = Comment.includes({:lesson => :user}, :user).find(comment_id)
