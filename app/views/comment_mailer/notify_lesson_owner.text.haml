@@ -1,0 +1,11 @@
+= "#{@author.display_name} has posted a comment to your lesson, #{@lesson.title}"
+
+
+Their comment:
+
+= @comment.text
+
+
+You can view their comment on your lesson page:
+
+= link_to(@lesson.title, lesson_path(@lesson))

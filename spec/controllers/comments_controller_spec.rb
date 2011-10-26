@@ -3,7 +3,7 @@ require 'spec_helper'
 describe CommentsController do
 
   def valid_attributes
-    {}
+    {:text => "A comment", :user_id => Factory(:user).id}
   end
 
   before :each do
@@ -30,6 +30,14 @@ describe CommentsController do
         post :create, :lesson_id => @lesson.id.to_s, :comment => valid_attributes
         response.should redirect_to(@lesson)
       end
+
+      it "emails the lesson creator" do
+        ActionMailer::Base.deliveries.length.should == 0
+        post :create, :lesson_id => @lesson.id.to_s, :comment => valid_attributes
+        comment = Comment.last
+        comment.lesson.should == @lesson
+        verify_only_delivery(@lesson.user.email, [])
+      end
     end
 
     describe "with invalid params" do
@@ -52,7 +60,7 @@ describe CommentsController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested comment" do
-        comment = Comment.create! valid_attributes
+        comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
         # Assuming there are no other comments in the database, this
         # specifies that the Comment created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -62,13 +70,13 @@ describe CommentsController do
       end
 
       it "assigns the requested comment as @comment" do
-        comment = Comment.create! valid_attributes
+        comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
         put :update, :lesson_id => @lesson.id.to_s, :id => comment.id, :comment => valid_attributes
         assigns(:comment).should eq(comment)
       end
 
       it "redirects to the comment" do
-        comment = Comment.create! valid_attributes
+        comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
         put :update, :lesson_id => @lesson.id.to_s, :id => comment.id, :comment => valid_attributes
         response.should redirect_to(@lesson)
       end
@@ -76,7 +84,7 @@ describe CommentsController do
 
     describe "with invalid params" do
       it "assigns the comment as @comment" do
-        comment = Comment.create! valid_attributes
+        comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
         # Trigger the behavior that occurs when invalid params are submitted
         Comment.any_instance.stub(:save).and_return(false)
         put :update, :lesson_id => @lesson.id.to_s, :id => comment.id.to_s, :comment => {}
@@ -84,7 +92,7 @@ describe CommentsController do
       end
 
       it "re-renders the 'edit' template" do
-        comment = Comment.create! valid_attributes
+        comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
         # Trigger the behavior that occurs when invalid params are submitted
         Comment.any_instance.stub(:save).and_return(false)
         put :update, :lesson_id => @lesson.id.to_s, :id => comment.id.to_s, :comment => {}
@@ -95,14 +103,14 @@ describe CommentsController do
 
   describe "DELETE destroy" do
     it "destroys the requested comment" do
-      comment = Comment.create! valid_attributes
+      comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
       expect {
         delete :destroy, :lesson_id => @lesson.id.to_s, :id => comment.id.to_s
       }.to change(Comment, :count).by(-1)
     end
 
     it "redirects to the comments list" do
-      comment = Comment.create! valid_attributes
+      comment = Comment.create! valid_attributes.merge(:lesson => @lesson)
       delete :destroy, :lesson_id => @lesson.id.to_s, :id => comment.id.to_s
       response.should redirect_to(@lesson)
     end

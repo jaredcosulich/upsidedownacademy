@@ -1,0 +1,8 @@
+%p= "#{@author.display_name} has posted a comment to your lesson, #{@lesson.title}"
+
+%p Their comment:
+%p{:style => "padding-left: 12px; border-left: 2px solid #eee;"}
+  = @comment.text
+
+%p You can view their comment on your lesson page:
+%p= link_to(@lesson.title, lesson_path(@lesson))

@@ -28,5 +28,19 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  config.before(:each) do
+    ActionMailer::Base.deliveries.clear
+  end
+end
+
+def verify_only_delivery(recipient_email, body_regexs)
+  message = ActionMailer::Base.deliveries.only
+  message.to_addrs.first.to_s.should include(recipient_email)
+  body_regexs = [body_regexs] unless body_regexs.is_a?(Array)
+
+  body_regexs.each do |body_regex|
+    message.body.should =~ body_regex
+  end
 end
 

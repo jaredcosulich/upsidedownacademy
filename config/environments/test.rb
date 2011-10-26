@@ -43,4 +43,11 @@ Upsidedownacademy::Application.configure do
 
   # Allow pass debug_assets=true as a query parameter to load pages with unpackaged assets
   config.assets.allow_debugging = true
+
+  module ::Enumerable
+    def only
+      raise "expected exactly one item but there were #{size}" unless size == 1
+      first
+    end
+  end
 end
