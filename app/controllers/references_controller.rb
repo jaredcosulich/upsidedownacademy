@@ -16,7 +16,7 @@ class ReferencesController < ApplicationController
   # GET /references/1
   # GET /references/1.json
   def show
-    @reference = Reference.find(params[:id])
+    @reference = @lesson.references.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -37,7 +37,7 @@ class ReferencesController < ApplicationController
 
   # GET /references/1/edit
   def edit
-    @reference = Reference.find(params[:id])
+    @reference = @lesson.references.find(params[:id])
   end
 
   # POST /references
@@ -59,11 +59,11 @@ class ReferencesController < ApplicationController
   # PUT /references/1
   # PUT /references/1.json
   def update
-    @reference = Reference.find(params[:id])
+    @reference = @lesson.references.find(params[:id])
 
     respond_to do |format|
       if @reference.update_attributes(params[:reference])
-        format.html { redirect_to lesson_path(@lesson), notice: 'Reference was successfully updated.' }
+        format.html { render "layouts/close_window" }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
@@ -75,7 +75,7 @@ class ReferencesController < ApplicationController
   # DELETE /references/1
   # DELETE /references/1.json
   def destroy
-    @reference = Reference.find(params[:id])
+    @reference = @lesson.references.find(params[:id])
     @reference.destroy
 
     respond_to do |format|

@@ -32,10 +32,12 @@ describe CommentsController do
       end
 
       it "emails the lesson creator" do
+        ActionMailer::Base.deliveries.clear
         ActionMailer::Base.deliveries.length.should == 0
         post :create, :lesson_id => @lesson.id.to_s, :comment => valid_attributes
         comment = Comment.last
         comment.lesson.should == @lesson
+        
         verify_only_delivery(@lesson.user.email, [])
       end
     end

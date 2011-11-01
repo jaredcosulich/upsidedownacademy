@@ -1,4 +1,4 @@
-= form_for(@reference, :url => lesson_references_path(@lesson)) do |f|
+= form_for(@reference, :url => (@reference.new_record? ? lesson_references_path(@lesson) : lesson_reference_path(@lesson, @reference)), :method => (@reference.new_record? ? :post : :put)) do |f|
   - if @reference.errors.any?
     #error_explanation
       %h2
