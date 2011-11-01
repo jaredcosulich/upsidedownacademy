@@ -2,20 +2,20 @@
 
 %p
   %b General Subject:
-  = link_to @lesson.subject, edit_lesson_path(@lesson, :edit_title => 1)
+  = @lesson.subject
 %p
   %b Specific Subject:
-  = link_to @lesson.specific_subject, edit_lesson_path(@lesson, :edit_title => 1)
+  = @lesson.specific_subject
 
 %p
   %b Lesson Title:
-  = link_to_unless @lesson.title.blank?, @lesson.title, edit_lesson_path(@lesson, :edit_title => 1)
+  = @lesson.title
 
 %p
   %b Confidence Level:
-  = link_to @lesson.confidence_text, edit_lesson_path(@lesson, :edit_title => 1)
+  = @lesson.confidence_text
 
 %p.small
-  (click any of the information above to edit it)
+  = link_to "Edit this information >", edit_lesson_path(@lesson, :edit_title => 1)
 
 %br
