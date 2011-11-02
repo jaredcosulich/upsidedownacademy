@@ -4,7 +4,7 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.published.all
+    @lessons = Lesson.published.recent.all
 
     respond_to do |format|
       format.html # index.html.erb

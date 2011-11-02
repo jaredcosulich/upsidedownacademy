@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111101211642) do
+ActiveRecord::Schema.define(:version => 20111102210843) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20111101211642) do
     t.integer  "confidence_score"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.date     "published_at"
     t.string   "specific_subject"
+    t.datetime "published_at"
   end
 
   add_index "lessons", ["user_id"], :name => "index_lessons_on_user_id"
