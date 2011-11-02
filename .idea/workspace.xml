@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="- fixing published_at">
+    <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="- fixing user lesson list">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/my_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/my_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
     </list>
     <ignored path="upsidedownacademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,15 +27,6 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.haml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.haml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="20" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="lesson.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,10 +54,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="my_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/my_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="46" selection-start="140" selection-end="140" vertical-scroll-proportion="0.1627409">
+            <state line="3" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="-2.1111112">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lessons.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/my/lessons.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/profiles/show.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="5" selection-start="95" selection-end="95" vertical-scroll-proportion="0.20342612">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profiles_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="-1.4074074">
               <folding />
             </state>
           </provider>
@@ -135,8 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/views/lesson_links/edit.html.haml_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/routing/lesson_links_routing_spec.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/spec/requests/lesson_links_spec.rb" />
         <option value="$PROJECT_DIR$/app/controllers/lesson_links_controller.rb" />
@@ -151,6 +167,8 @@
         <option value="$PROJECT_DIR$/app/models/lesson.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20111102210843_fix_published_at.rb" />
         <option value="$PROJECT_DIR$/app/controllers/my_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/profiles_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/profiles/show.html.haml" />
       </list>
     </option>
   </component>
@@ -325,6 +343,50 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profiles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -900,7 +962,7 @@
     <option name="CHANGED_ON_SERVER_INTERVAL" value="5" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- fixing published_at" />
+    <option name="LAST_COMMIT_MESSAGE" value="- fixing user lesson list" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -913,7 +975,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="- tweaking lesson creation flow&#10;- save often warning" />
     <MESSAGE value="- unsaved changes warning" />
     <MESSAGE value="- tweaking about page" />
     <MESSAGE value="- tweaking lesson page" />
@@ -938,32 +999,12 @@
     <MESSAGE value="- fixing tests" />
     <MESSAGE value="- fixing registration" />
     <MESSAGE value="- fixing published_at" />
+    <MESSAGE value="- fixing user lesson list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/spec/controllers/lesson_links_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="53" selection-start="6171" selection-end="6171" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/references_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="34" selection-start="3807" selection-end="3807" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="11" selection-start="203" selection-end="203" vertical-scroll-proportion="0.30359522">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/mailers/comment_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="0" selection-start="188" selection-end="188" vertical-scroll-proportion="0.12872629">
@@ -1048,7 +1089,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/my_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="46" selection-start="140" selection-end="140" vertical-scroll-proportion="0.1627409">
+        <state line="3" column="0" selection-start="80" selection-end="80" vertical-scroll-proportion="-2.1111112">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/my/lessons.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/profiles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="-1.4074074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/profiles/show.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="5" selection-start="95" selection-end="95" vertical-scroll-proportion="0.20342612">
           <folding />
         </state>
       </provider>
