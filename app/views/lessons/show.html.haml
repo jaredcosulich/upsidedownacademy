@@ -61,6 +61,27 @@
     - if lesson_owner?(@lesson)
       %p= link_to("Add reference material for your lesson >", new_lesson_reference_path(@lesson), :class => "lightbox")
 
+  .lesson_links
+    - if (previous_lessons = @lesson.lesson_links.previous.with_linked_lesson.map(&:linked_lesson)).present?
+      %h3 View These Lessons First
+      %p You may want to check out these lessons before you go through this lesson:
+      %ul
+        - previous_lessons.each do |lesson|
+          %li= link_to(lesson.title, lesson_path(lesson))
+
+    - if (next_lessons = @lesson.lesson_links.next.with_linked_lesson.map(&:linked_lesson)).present?
+      - if previous_lessons.present? 
+        %br
+
+      %h3 View These Lessons Next
+      %p You may want to check out these lessons after you go through this lesson:
+      %ul
+        - next_lessons.each do |lesson|
+          %li= link_to(lesson.title, lesson_path(lesson))
+
+    - if lesson_owner?(@lesson)
+      %p= link_to("Add lesson links your lesson >", new_lesson_lesson_link_path(@lesson), :class => "lightbox")
+
   .comments
     %h3 Comments On This Lesson
     - @lesson.comments.each do |comment|

@@ -18,6 +18,7 @@ Upsidedownacademy::Application.routes.draw do
     end
     resources :photos
     resources :references
+    resources :lesson_links    
     resources :comments
   end
   

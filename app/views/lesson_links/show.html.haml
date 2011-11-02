@@ -1,0 +1,10 @@
+%p
+  %b Title:
+  = @reference.title
+%p
+  %b Url:
+  = @reference.url
+%p
+  %b Comments:
+  = @reference.comments
+= link_to 'Edit', edit_lesson_reference_path(@lesson, @reference)

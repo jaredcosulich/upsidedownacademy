@@ -1,0 +1,27 @@
+= form_for(@lesson_link, :url => (@lesson_link.new_record? ? lesson_lesson_links_path(@lesson) : lesson_lesson_link_path(@lesson, @lesson_link)), :method => (@lesson_link.new_record? ? :post : :put)) do |f|
+  - if @lesson_link.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@lesson_link.errors.count, "error")
+        prohibited this resource from being saved:
+      %ul
+        - @lesson_link.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    %p Are you recommending people view a lesson before or after this lesson?
+    %p
+      = f.radio_button :next_lesson, "1"
+      = f.label :next_lesson, "People should watch the lesson below next."
+    %p
+      = f.radio_button :next_lesson, "0"
+      = f.label :next_lesson, "People should watch the lesson below before this lesson."
+    
+  .field
+    %p
+      = f.label :linked_lesson_id, "Lesson ID: "
+      = f.text_field :linked_lesson_id
+    %div{:style => 'font-size: 9pt;'}
+      = "The lesson ID can be found in the url (e.g. the ID for this lesson is #{@lesson.id})"
+  .actions
+    %p= f.submit

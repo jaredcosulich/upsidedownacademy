@@ -1,0 +1,19 @@
+%h1 Listing references
+%table
+  %tr
+    %th Title
+    %th Url
+    %th Comments
+    %th
+    %th
+    %th
+  - @references.each do |reference|
+    %tr
+      %td= reference.title
+      %td= reference.url
+      %td= reference.comments
+      %td= link_to 'Show', lesson_reference_path(@lesson, reference)
+      %td= link_to 'Edit', edit_lesson_reference_path(@lesson, reference)
+      %td= link_to 'Destroy', lesson_reference_path(@lesson, reference), confirm: 'Are you sure?', method: :delete
+%br/
+= link_to 'New Reference', new_lesson_reference_path(@lesson)

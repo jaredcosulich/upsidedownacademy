@@ -3,10 +3,11 @@ class Lesson < ActiveRecord::Base
   has_many :videos, :order => "id asc"
   has_many :photos, :order => "id asc"
   has_many :references, :order => "id asc"
+  has_many :lesson_links, :order => "id asc"
   has_many :comments
 
   scope :recent, order("created_at desc")
-  scope :published, where("published_at is not null")
+  scope :published, where("published_at is not null").order("published_at desc")
   scope :with_videos, includes(:videos)
   scope :with_photos, includes(:photos)
   scope :with_references, includes(:references)

@@ -139,6 +139,23 @@
 
           = link_to("Add reference material for your lesson", new_lesson_reference_path(@lesson), :class => "lightbox")
 
+        .section
+          %h3 Next / Previous Lesson
+          - if @lesson.lesson_links.empty?
+            .small
+              %p You haven't yet suggested any lessons that people should view before or after this lesson.
+              %p Add any good lesson on Upside Down Academy that people should view before or after this lesson.
+          - else
+            - @lesson.lesson_links.each do |lesson_link|
+              .reference_preview
+                .small.clear.right
+                  = link_to("edit", edit_lesson_lesson_link_path(@lesson, lesson_link), :class => "lightbox")
+                  &nbsp; &nbsp; &nbsp;
+                  = link_to("delete", lesson_lesson_link_path(@lesson, lesson_link), :method => :delete, :confirm => "Are you sure you want to delete this lesson link?")
+                = link_to(lesson_link.linked_lesson.title, lesson_path(lesson_link.linked_lesson), :target => "_blank")
+                = lesson_link.next_lesson? ? "(next)" : "(before)"
+          = link_to("Add a lesson to view before or after this lesson", new_lesson_lesson_link_path(@lesson), :class => "lightbox")
+
     .field
       %h3 Lesson Text
       .small Please write out as much of your lesson as possible, even if you're doing a video.
