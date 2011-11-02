@@ -20,7 +20,7 @@ describe ReferencesController do
 
   describe "GET show" do
     it "assigns the requested reference as @reference" do
-      reference = Reference.create! valid_attributes
+      reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
       get :show, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       assigns(:reference).should eq(reference)
     end
@@ -35,7 +35,7 @@ describe ReferencesController do
 
   describe "GET edit" do
     it "assigns the requested reference as @reference" do
-      reference = Reference.create! valid_attributes
+      reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
       get :edit, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       assigns(:reference).should eq(reference)
     end
@@ -81,7 +81,7 @@ describe ReferencesController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested reference" do
-        reference = Reference.create! valid_attributes
+        reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
         # Assuming there are no other references in the database, this
         # specifies that the Reference created on the previous line
         # receives the :update_attributes message with whatever params are
@@ -91,21 +91,21 @@ describe ReferencesController do
       end
 
       it "assigns the requested reference as @reference" do
-        reference = Reference.create! valid_attributes
+        reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
         put :update, :lesson_id => @lesson.id.to_s, :id => reference.id, :reference => valid_attributes
         assigns(:reference).should eq(reference)
       end
 
       it "redirects to the reference" do
-        reference = Reference.create! valid_attributes
+        reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
         put :update, :lesson_id => @lesson.id.to_s, :id => reference.id, :reference => valid_attributes
-        response.should redirect_to(lesson_path(@lesson))
+        response.should be_success
       end
     end
 
     describe "with invalid params" do
       it "assigns the reference as @reference" do
-        reference = Reference.create! valid_attributes
+        reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
         # Trigger the behavior that occurs when invalid params are submitted
         Reference.any_instance.stub(:save).and_return(false)
         put :update, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s, :reference => {}
@@ -113,7 +113,7 @@ describe ReferencesController do
       end
 
       it "re-renders the 'edit' template" do
-        reference = Reference.create! valid_attributes
+        reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
         # Trigger the behavior that occurs when invalid params are submitted
         Reference.any_instance.stub(:save).and_return(false)
         put :update, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s, :reference => {}
@@ -124,14 +124,14 @@ describe ReferencesController do
 
   describe "DELETE destroy" do
     it "destroys the requested reference" do
-      reference = Reference.create! valid_attributes
+      reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
       expect {
         delete :destroy, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       }.to change(Reference, :count).by(-1)
     end
 
     it "redirects to the references list" do
-      reference = Reference.create! valid_attributes
+      reference = Reference.create! valid_attributes.merge(:lesson => @lesson)
       delete :destroy, :lesson_id => @lesson.id.to_s, :id => reference.id.to_s
       response.should redirect_to(edit_lesson_path(@lesson))
     end

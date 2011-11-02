@@ -18,7 +18,7 @@ Upsidedownacademy::Application.routes.draw do
     end
     resources :photos
     resources :references
-    resources :lesson_links    
+    resources :lesson_links, :except => [:index, :show]    
     resources :comments
   end
   

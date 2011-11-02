@@ -24,36 +24,24 @@ describe LessonLinksController do
   # LessonLink. As you add validations to LessonLink, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:linked_lesson_id => 2}
   end
 
-  describe "GET index" do
-    it "assigns all lesson_links as @lesson_links" do
-      lesson_link = LessonLink.create! valid_attributes
-      get :index
-      assigns(:lesson_links).should eq([lesson_link])
-    end
-  end
-
-  describe "GET show" do
-    it "assigns the requested lesson_link as @lesson_link" do
-      lesson_link = LessonLink.create! valid_attributes
-      get :show, :id => lesson_link.id.to_s
-      assigns(:lesson_link).should eq(lesson_link)
-    end
+  before :each do
+    @lesson = Factory(:lesson)
   end
 
   describe "GET new" do
     it "assigns a new lesson_link as @lesson_link" do
-      get :new
+      get :new, :lesson_id => @lesson.id.to_s
       assigns(:lesson_link).should be_a_new(LessonLink)
     end
   end
 
   describe "GET edit" do
     it "assigns the requested lesson_link as @lesson_link" do
-      lesson_link = LessonLink.create! valid_attributes
-      get :edit, :id => lesson_link.id.to_s
+      lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
+      get :edit, :lesson_id => @lesson.id.to_s, :id => lesson_link.id.to_s
       assigns(:lesson_link).should eq(lesson_link)
     end
   end
@@ -62,19 +50,19 @@ describe LessonLinksController do
     describe "with valid params" do
       it "creates a new LessonLink" do
         expect {
-          post :create, :lesson_link => valid_attributes
+          post :create, :lesson_id => @lesson.id.to_s, :lesson_link => valid_attributes
         }.to change(LessonLink, :count).by(1)
       end
 
       it "assigns a newly created lesson_link as @lesson_link" do
-        post :create, :lesson_link => valid_attributes
+        post :create, :lesson_id => @lesson.id.to_s, :lesson_link => valid_attributes
         assigns(:lesson_link).should be_a(LessonLink)
         assigns(:lesson_link).should be_persisted
       end
 
       it "redirects to the created lesson_link" do
-        post :create, :lesson_link => valid_attributes
-        response.should redirect_to(LessonLink.last)
+        post :create, :lesson_id => @lesson.id.to_s, :lesson_link => valid_attributes
+        response.should be_success
       end
     end
 
@@ -82,14 +70,14 @@ describe LessonLinksController do
       it "assigns a newly created but unsaved lesson_link as @lesson_link" do
         # Trigger the behavior that occurs when invalid params are submitted
         LessonLink.any_instance.stub(:save).and_return(false)
-        post :create, :lesson_link => {}
+        post :create, :lesson_id => @lesson.id.to_s, :lesson_link => {}
         assigns(:lesson_link).should be_a_new(LessonLink)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         LessonLink.any_instance.stub(:save).and_return(false)
-        post :create, :lesson_link => {}
+        post :create, :lesson_id => @lesson.id.to_s, :lesson_link => {}
         response.should render_template("new")
       end
     end
@@ -98,42 +86,42 @@ describe LessonLinksController do
   describe "PUT update" do
     describe "with valid params" do
       it "updates the requested lesson_link" do
-        lesson_link = LessonLink.create! valid_attributes
+        lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
         # Assuming there are no other lesson_links in the database, this
         # specifies that the LessonLink created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         LessonLink.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, :id => lesson_link.id, :lesson_link => {'these' => 'params'}
+        put :update, :lesson_id => @lesson.id.to_s, :id => lesson_link.id, :lesson_link => {'these' => 'params'}
       end
 
       it "assigns the requested lesson_link as @lesson_link" do
-        lesson_link = LessonLink.create! valid_attributes
-        put :update, :id => lesson_link.id, :lesson_link => valid_attributes
+        lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
+        put :update, :lesson_id => @lesson.id.to_s, :id => lesson_link.id, :lesson_link => valid_attributes
         assigns(:lesson_link).should eq(lesson_link)
       end
 
-      it "redirects to the lesson_link" do
-        lesson_link = LessonLink.create! valid_attributes
-        put :update, :id => lesson_link.id, :lesson_link => valid_attributes
-        response.should redirect_to(lesson_link)
+      it "render the close_window view" do
+        lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
+        put :update, :lesson_id => @lesson.id.to_s, :id => lesson_link.id, :lesson_link => valid_attributes
+        response.should be_success
       end
     end
 
     describe "with invalid params" do
       it "assigns the lesson_link as @lesson_link" do
-        lesson_link = LessonLink.create! valid_attributes
+        lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
         # Trigger the behavior that occurs when invalid params are submitted
         LessonLink.any_instance.stub(:save).and_return(false)
-        put :update, :id => lesson_link.id.to_s, :lesson_link => {}
+        put :update, :lesson_id => @lesson.id.to_s, :id => lesson_link.id.to_s, :lesson_link => {}
         assigns(:lesson_link).should eq(lesson_link)
       end
 
       it "re-renders the 'edit' template" do
-        lesson_link = LessonLink.create! valid_attributes
+        lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
         # Trigger the behavior that occurs when invalid params are submitted
         LessonLink.any_instance.stub(:save).and_return(false)
-        put :update, :id => lesson_link.id.to_s, :lesson_link => {}
+        put :update, :lesson_id => @lesson.id.to_s, :id => lesson_link.id.to_s, :lesson_link => {}
         response.should render_template("edit")
       end
     end
@@ -141,16 +129,16 @@ describe LessonLinksController do
 
   describe "DELETE destroy" do
     it "destroys the requested lesson_link" do
-      lesson_link = LessonLink.create! valid_attributes
+      lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
       expect {
-        delete :destroy, :id => lesson_link.id.to_s
+        delete :destroy, :lesson_id => @lesson.id.to_s, :id => lesson_link.id.to_s
       }.to change(LessonLink, :count).by(-1)
     end
 
     it "redirects to the lesson_links list" do
-      lesson_link = LessonLink.create! valid_attributes
-      delete :destroy, :id => lesson_link.id.to_s
-      response.should redirect_to(lesson_links_url)
+      lesson_link = LessonLink.create! valid_attributes.merge(:lesson_id => @lesson.id)
+      delete :destroy, :lesson_id => @lesson.id.to_s, :id => lesson_link.id.to_s
+      response.should redirect_to(lesson_path(@lesson))
     end
   end
 

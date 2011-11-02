@@ -2,17 +2,6 @@ class LessonLinksController < ApplicationController
   before_filter :load_lesson
   layout false
 
-  # GET /lesson_links
-  # GET /lesson_links.json
-  def index
-    @lesson_links = LessonLink.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @lesson_links }
-    end
-  end
-
   # GET /lesson_links/1
   # GET /lesson_links/1.json
   def show
@@ -79,7 +68,7 @@ class LessonLinksController < ApplicationController
     @lesson_link.destroy
 
     respond_to do |format|
-      format.html { redirect_to lesson_links_url }
+      format.html { redirect_to lesson_path(@lesson) }
       format.json { head :ok }
     end
   end
