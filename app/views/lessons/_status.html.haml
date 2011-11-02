@@ -6,7 +6,7 @@
   - if @lesson.body.present?
     .publish_lesson
       = form_for(@lesson) do |f|
-        = f.hidden_field :published_at, :value => Date.today
+        = f.hidden_field :published_at, :value => Time.new
         %a Publish lesson >
   - else
     Please add lesson text before publishing.
