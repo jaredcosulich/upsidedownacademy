@@ -1,9 +1,9 @@
 class Lesson < ActiveRecord::Base
   belongs_to :user
-  has_many :videos, :order => "id asc"
-  has_many :photos, :order => "id asc"
-  has_many :references, :order => "id asc"
-  has_many :lesson_links, :order => "id asc"
+  has_many :videos
+  has_many :photos
+  has_many :references
+  has_many :lesson_links
   has_many :comments
 
   scope :recent, order("published_at desc")

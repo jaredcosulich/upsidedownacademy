@@ -33,7 +33,7 @@ class LessonLinksController < ApplicationController
   # POST /lesson_links.json
   def create
     @lesson_link = @lesson.lesson_links.new(params[:lesson_link])
-
+    
     respond_to do |format|
       if @lesson_link.save
         format.html { render "layouts/close_window" }

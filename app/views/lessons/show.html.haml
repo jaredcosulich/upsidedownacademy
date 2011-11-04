@@ -62,14 +62,15 @@
       %p= link_to("Add reference material for your lesson >", new_lesson_reference_path(@lesson), :class => "lightbox")
 
   .lesson_links
-    - if (previous_lessons = @lesson.lesson_links.previous.with_linked_lesson.map(&:linked_lesson)).present?
+    - linked_lessons = @lesson.lesson_links.with_published_linked_lesson
+    - if (previous_lessons = linked_lessons.previous.map(&:linked_lesson)).present?
       %h3 View These Lessons First
       %p You may want to check out these lessons before you go through this lesson:
       %ul
         - previous_lessons.each do |lesson|
           %li= link_to(lesson.title, lesson_path(lesson))
 
-    - if (next_lessons = @lesson.lesson_links.next.with_linked_lesson.map(&:linked_lesson)).present?
+    - if (next_lessons = linked_lessons.next.map(&:linked_lesson)).present?
       - if previous_lessons.present? 
         %br
 

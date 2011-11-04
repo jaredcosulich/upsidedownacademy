@@ -23,5 +23,11 @@
       = f.text_field :linked_lesson_id
     %div{:style => 'font-size: 9pt;'}
       = "The lesson ID can be found in the url (e.g. the ID for this lesson is #{@lesson.id})"
+
+  .field
+    %p
+      = f.check_box :back_link
+      = f.label :back_link, "Create a link back to this lesson (only works if you own the other lesson)."
+
   .actions
     %p= f.submit

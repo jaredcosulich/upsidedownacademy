@@ -29,6 +29,7 @@ describe LessonLinksController do
 
   before :each do
     @lesson = Factory(:lesson)
+    @other_lesson = Factory(:lesson, :user => @lesson.user)
   end
 
   describe "GET new" do
@@ -60,9 +61,56 @@ describe LessonLinksController do
         assigns(:lesson_link).should be_persisted
       end
 
-      it "redirects to the created lesson_link" do
+      it "renders the close_window template" do
         post :create, :lesson_id => @lesson.id.to_s, :lesson_link => valid_attributes
         response.should be_success
+      end
+
+      describe "back links" do
+        it "should create a back link if requested and linked_to lesson is owner by user" do
+          post :create,
+            :lesson_id => @lesson.id.to_s,
+            :lesson_link => {:linked_lesson_id => @other_lesson.to_param, :back_link => "1"}
+
+          LessonLink.count.should == 2
+          
+          lesson_link = LessonLink.first
+          lesson_link.next_lesson.should be_true
+          lesson_link.linked_lesson_id.should == @other_lesson.id
+          lesson_link.lesson_id.should == @lesson.id
+
+          back_link = LessonLink.last
+          back_link.next_lesson.should be_false
+          back_link.linked_lesson_id.should == @lesson.id
+          back_link.lesson_id.should == @other_lesson.id
+        end
+
+        it "should not create a back link if not requested" do
+          post :create,
+            :lesson_id => @lesson.id.to_s,
+            :lesson_link => {:linked_lesson_id => @other_lesson.to_param}
+
+          LessonLink.count.should == 1
+
+          lesson_link = LessonLink.first
+          lesson_link.next_lesson.should be_true
+          lesson_link.linked_lesson_id.should == @other_lesson.id
+          lesson_link.lesson_id.should == @lesson.id
+        end
+
+        it "should not create a back link if linked_to lesson is not owned by user" do
+          random_lesson = Factory(:lesson)
+          post :create,
+            :lesson_id => @lesson.id.to_s,
+            :lesson_link => {:linked_lesson_id => random_lesson.to_param, :back_link => "1"}
+
+          LessonLink.count.should == 1
+
+          lesson_link = LessonLink.first
+          lesson_link.next_lesson.should be_true
+          lesson_link.linked_lesson_id.should == random_lesson.id
+          lesson_link.lesson_id.should == @lesson.id
+        end
       end
     end
 
