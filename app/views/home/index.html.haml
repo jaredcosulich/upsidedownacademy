@@ -48,18 +48,24 @@
   %p= link_to("Create a lesson >", new_lesson_path)
 
 .example_lessons
+  - examples = [18,19]
+  - example = Lesson.includes(:user, :videos).find(params[:example_id] || examples.shuffle.pop)
   %p
-    %b Algrebra 1:
-    Solving a Simple Equation
+    %b= "#{example.subject}: #{example.specific_subject}:"
+    = link_to(example.title, lesson_path(example))
   %p
     Created by:
-    = "#{link_to("Sarah Jane", "")}, ".html_safe
-    = link_to("Envision Academy", "")
+    = "#{link_to(example.user.display_name, profile_path(example.user))}, ".html_safe
+    9th Grade, Envision Academy, Oakland, CA
   %p
     Confidence Level:
-    = Lesson::CONFIDENCE_SCORES[3][0]
+    = example.confidence_text
 
-  %iframe{:width => "560", :height => "315", :src => "http://www.youtube.com/embed/9Ek61w1LxSc", :frameborder => "0", :allowfullscreen => "allowfullscreen"}
+  %iframe{:width => "560", :height => "315", :src => "http://www.youtube.com/embed/#{example.videos.first.youtube_id}", :frameborder => "0", :allowfullscreen => "allowfullscreen"}
+
+  %p
+    %b Other Examples:
+    = examples.collect { |id| link_to_unless(example.id == id, examples.index(id) + 1, params.merge(:example_id => id)) }.join(", ").html_safe
 
 .explore
   %h3 Recent Lessons
