@@ -51,7 +51,7 @@
   - examples = [18,19]
   - example = Lesson.includes(:user, :videos).find(params[:example_id] || examples.shuffle.pop)
   %p
-    %b= "#{example.subject}: #{example.specific_subject}:"
+    %b= "#{example.subject} > #{example.specific_subject} >"
     = link_to(example.title, lesson_path(example))
   %p
     Created by:
