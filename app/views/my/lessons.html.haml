@@ -3,9 +3,10 @@
 %h2 Lessons You've Created
 %table{:style => "width: 100%"}
   %tr
-    %th Subject
+    %th General Subject
+    %th Specific Subject
     %th Title
-    %th Confidence score
+    %th Confidence
     %th Publish Date
     %th
     %th
@@ -13,11 +14,11 @@
   - @lessons.each do |lesson|
     %tr
       %td= lesson.subject
-      %td= lesson.title
-      %td= lesson.confidence_score
-      %td= lesson.published_at.nil? ? "Not Published" : lesson.published_at.strftime("%m/%d/%Y")
-      %td= link_to 'Show', lesson
+      %td= lesson.specific_subject
+      %td= link_to(lesson.title, lesson)
+      %td.text_center= lesson.confidence_score
+      %td.text_center= lesson.published_at.nil? ? "Not Published" : lesson.published_at.strftime("%m/%d/%Y")
       %td= link_to 'Edit', edit_lesson_path(lesson)
-      %td= link_to 'Destroy', lesson, :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Delete', lesson, :confirm => 'Are you sure?', :method => :delete
 %br
 = link_to 'New Lesson', new_lesson_path
