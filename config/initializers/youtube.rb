@@ -15,14 +15,14 @@ class YouTube
 xmlns:media="http://search.yahoo.com/mrss/"
 xmlns:yt="http://gdata.youtube.com/schemas/2007">
 <media:group>
-<media:title type="plain">#{video.title || lesson.full_title}</media:title>
+<media:title type="plain">#{safe_title(video.title || lesson.full_title)}</media:title>
 <media:description type="plain">
-This video is a component of the lesson, "#{lesson.full_title}". The full lesson can be found on UpsideDownAcademy.org - #{lesson_url}.
+This video is a component of the lesson, "#{safe_title(lesson.full_title)}". The full lesson can be found on UpsideDownAcademy.org - #{lesson_url}.
 </media:description>
 <media:category
 scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Education
 </media:category>
-<media:keywords>education, #{lesson.subject}, #{lesson.specific_subject}</media:keywords>
+<media:keywords>education, #{safe_title(lesson.subject)}, #{safe_title(lesson.specific_subject)}</media:keywords>
 </media:group>
 </entry>
     xml_data
@@ -45,6 +45,10 @@ scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Education
       info[element.name] = element.text
     end
     info
+  end
+
+  def self.safe_title(title)
+    title.gsub(/&/, " and ")
   end
 
   def self.post_video_file
