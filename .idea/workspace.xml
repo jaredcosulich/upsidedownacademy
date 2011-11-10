@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab11fc12-129b-48a6-86d6-e6ec42dbc405" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/youtube.rb" afterPath="$PROJECT_DIR$/config/initializers/youtube.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="upsidedownacademy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +26,28 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" showNonProject="false" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="youtube.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="youtube.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/youtube.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.7482419">
+            <state line="12" column="21" selection-start="571" selection-end="571" vertical-scroll-proportion="-8.444445">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.haml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="53" column="59" selection-start="2249" selection-end="2249" vertical-scroll-proportion="-37.296295">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.haml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="25" selection-start="530" selection-end="530" vertical-scroll-proportion="0.4008439">
               <folding />
             </state>
           </provider>
@@ -71,7 +89,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/spec/controllers/comments_controller_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.haml" />
         <option value="$PROJECT_DIR$/app/controllers/lessons_controller.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20111102210843_fix_published_at.rb" />
@@ -87,6 +104,7 @@
         <option value="$PROJECT_DIR$/app/controllers/my_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/index.html.haml" />
         <option value="$PROJECT_DIR$/config/initializers/youtube.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
       </list>
     </option>
   </component>
@@ -248,6 +266,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lessons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upsidedownacademy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -841,11 +881,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/profiles/show.html.haml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="95" selection-end="95" vertical-scroll-proportion="0.20342612" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/lessons_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="49" column="5" selection-start="1253" selection-end="1253" vertical-scroll-proportion="-5.6296296" />
@@ -923,16 +958,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
+    <entry file="file://$PROJECT_DIR$/config/initializers/youtube.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="59" selection-start="2249" selection-end="2249" vertical-scroll-proportion="0.0">
+        <state line="12" column="21" selection-start="571" selection-end="571" vertical-scroll-proportion="-8.444445">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/youtube.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/index.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.7482419">
+        <state line="53" column="59" selection-start="2249" selection-end="2249" vertical-scroll-proportion="-37.296295">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="530" selection-end="530" vertical-scroll-proportion="0.4008439">
           <folding />
         </state>
       </provider>
