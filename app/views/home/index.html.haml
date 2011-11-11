@@ -47,7 +47,7 @@
     %li You'll create a collection of lessons you can refer back to later on.
   %p= link_to("Create a lesson >", new_lesson_path)
 
-.example_lessons
+#example_lessons
   - examples = [18,19,20,22,23,21]
   - example = Lesson.includes(:user, :videos).find(params[:example_id] || examples.shuffle.pop)
   %p
@@ -57,7 +57,7 @@
     Created by:
     = "#{link_to(example.user.display_name, profile_path(example.user))}, ".html_safe
     - if example.id == 15
-      Founder, Upside Down Academy (who just learned Bayes Rule)
+      Founder, Upside Down Academy (I just learned Bayes Rule)
     - else
       9th Grade, Envision Academy, Oakland, CA
   %p
@@ -70,7 +70,7 @@
 
   %p
     %b Other Examples:
-    = (examples + [15]).collect { |id| link_to_unless(example.id == id, examples.index(id) + 1, params.merge(:example_id => id)) }.join(", ").html_safe
+    = (examples + [15]).collect { |id| link_to_unless(example.id == id, (examples.index(id) || examples.length) + 1, params.merge(:example_id => id, :anchor => "example_lessons")) }.join(", ").html_safe
 
 .explore
   %h3 Recent Lessons
