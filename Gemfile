@@ -27,6 +27,7 @@ gem 'paperclip'
 gem 'aws-s3', '0.6.2', :require => 'aws/s3'
 
 gem "airbrake"
+gem "newrelic_rpm"
 
 # Use unicorn as the web server
 # gem 'unicorn'
