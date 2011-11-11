@@ -93,7 +93,7 @@ class LessonsController < ApplicationController
     @lesson.destroy
 
     respond_to do |format|
-      format.html { redirect_to lessons_url }
+      format.html { redirect_to lessons_my_index_path }
       format.json { head :ok }
     end
   end
