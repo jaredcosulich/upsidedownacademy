@@ -56,16 +56,21 @@
   %p
     Created by:
     = "#{link_to(example.user.display_name, profile_path(example.user))}, ".html_safe
-    9th Grade, Envision Academy, Oakland, CA
+    - if example.id == 15
+      Founder, Upside Down Academy (who just learned Bayes Rule)
+    - else
+      9th Grade, Envision Academy, Oakland, CA
   %p
     Confidence Level:
     = example.confidence_text
 
+  %p= link_to("View the whole lesson >", example)
+  
   %iframe{:width => "560", :height => "315", :src => "http://www.youtube.com/embed/#{example.videos.first.youtube_id}", :frameborder => "0", :allowfullscreen => "allowfullscreen"}
 
   %p
     %b Other Examples:
-    = examples.collect { |id| link_to_unless(example.id == id, examples.index(id) + 1, params.merge(:example_id => id)) }.join(", ").html_safe
+    = (examples + [15]).collect { |id| link_to_unless(example.id == id, examples.index(id) + 1, params.merge(:example_id => id)) }.join(", ").html_safe
 
 .explore
   %h3 Recent Lessons
