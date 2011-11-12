@@ -24,4 +24,7 @@ class AboutController < ApplicationController
   def for_everyone
   end
 
+  def strategies
+  end
+
 end

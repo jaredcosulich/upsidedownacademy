@@ -35,6 +35,7 @@ Upsidedownacademy::Application.routes.draw do
       get :for_home_schoolers
       get :for_students
       get :for_everyone
+      get :strategies
     end
   end
 
