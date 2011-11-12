@@ -4,8 +4,8 @@ class AdminMailer < ActionMailer::Base
 
   def notify(subject, message)
     mail(:to => 'jared@upsidedownacademy.org', :subject => subject) do |format|
-      format.text { render :text => message }
-      format.html { render :text => message }
+      format.text { render :text => message.gsub(/#</, "") }
+      format.html { render :text => message.gsub(/#</, "") }
     end
   end
 
