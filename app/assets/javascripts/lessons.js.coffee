@@ -1,6 +1,8 @@
 $ ->
   self = this;
-  setDefault = (input)->
+  window.saving = false
+
+  setDefault = (input) ->
     input = $(input)
     input.val(input.attr("data-hint")) if input.val().length == 0
     input.addClass("hinted") if input.val() == input.attr("data-hint")
@@ -36,6 +38,8 @@ $ ->
     setUnsavedWarning()
   $(".monitor_changes").change ->
     setUnsavedWarning()
+
+  setUnsavedWarning() if $(".monitor_changes").val() != $(".monitor_changes").attr("data-val")
 
 
 

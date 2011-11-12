@@ -160,7 +160,7 @@
       %h3 Lesson Text
       .small Please write out as much of your lesson as possible, even if you're doing a video.
       %p.small It's easier for people to scan/search text than to scan/search through a video.  
-      = f.text_area :body, :class => "monitor_changes", :style => "width: 450px;"
+      = f.text_area :body, :class => "monitor_changes", :data => {:val => @lesson.body}, :style => "width: 450px;"
 
   .actions.clear
     - if @lesson.title.present?
