@@ -196,7 +196,7 @@ describe LessonsController do
 
     it "redirects to the lessons list" do
       delete :destroy, :id => @lesson.id.to_s
-      response.should redirect_to(lessons_url)
+      response.should redirect_to(lessons_my_index_path)
     end
   end
 

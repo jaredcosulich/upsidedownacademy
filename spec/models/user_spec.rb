@@ -4,7 +4,8 @@ describe User do
   describe "#create" do
     it "should send a welcome email to the newly created user" do
       user = Factory(:user)
-      verify_only_delivery(user.email, [])
+      ActionMailer::Base.deliveries.length.should == 2
+      ActionMailer::Base.deliveries.first.to_addrs.should == [user.email]
     end
   end
 end
