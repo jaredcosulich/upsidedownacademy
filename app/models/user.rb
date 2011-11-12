@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   scope :with_lessons, includes(:lessons).where("lessons.published_at is not null")
 
   after_create :welcome
+  after_create :notify_admin
+
 
   def display_name
     nickname || name
@@ -25,6 +27,10 @@ class User < ActiveRecord::Base
 
   def welcome
     UserMailer.welcome(id).deliver    
+  end
+
+  def notify_admin
+    AdminMailer.notify("A new user was created.", self.inspect).deliver
   end
 
 end

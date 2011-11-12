@@ -13,6 +13,8 @@ class Lesson < ActiveRecord::Base
   scope :with_references, includes(:references)
   scope :with_comments, includes(:comments)
 
+  after_create :notify_admin
+
   CONFIDENCE_SCORES = [
     ["Just getting started, basically no idea what I'm doing.", 0],
     ["Not clueless, it's no longer a completely foreign language.", 10],
@@ -47,4 +49,11 @@ class Lesson < ActiveRecord::Base
   def to_param
     "#{id}_#{subject.sluggify}_#{specific_subject.sluggify}_#{title.sluggify}".downcase
   end
+
+  private
+
+  def notify_admin
+    AdminMailer.notify("A new lesson was created.", self.inspect).deliver
+  end
+  
 end
