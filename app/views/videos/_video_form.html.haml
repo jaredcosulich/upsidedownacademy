@@ -13,10 +13,10 @@
     }
 
 
-    $(document.body).find("form").submit(this.checkForFile);
+    $('#upload_form').submit(this.checkForFile);
   })
 
-= form_for :video, :url => @form_info["url"] + "?nexturl=#{url_for(assign_youtube_id_path(:video_id => @video.id, :only_path => false))}", :html => {:enctype => "multipart/form-data"} do |f|
+= form_for :video, :url => @form_info["url"] + "?nexturl=#{url_for(assign_youtube_id_path(:video_id => @video.id, :only_path => false))}", :html => {:enctype => "multipart/form-data", :id => 'upload_form'} do |f|
   #errMsg{:style => "display: none; color: red;"}
     You need to specify a file.
   %input{:id => "file", :type => "file", :name => "file"}
@@ -26,3 +26,23 @@
   %span.small.uploading_message{:style => "display: none;"}
     (uploading... this may take a while)
   %p It may take a little while for the video to upload so please be patient.
+
+%br
+
+= link_to_function("I've already uploaded my video to YouTube.", "$('#video_url').toggle()")
+#video_url{:style => 'display: none;'}
+  = form_for :video, :url => lesson_video_path(@lesson, @video), :method => :put do |f|
+    %p
+      %b Instructions
+    %ol
+      %li Go to your videos webpage
+      %li Click the "Share" button
+      %li Copy the selected text
+      %li
+        It should look like:
+        %b http://youtu.be/Oj8DJyr9dNc
+
+    %p
+      = f.label :youtube_url, "Video URL:"
+      = f.text_field :youtube_url
+    %p= f.submit "Save Video URL"
