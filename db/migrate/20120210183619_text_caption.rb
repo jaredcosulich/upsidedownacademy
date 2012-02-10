@@ -1,7 +1,7 @@
 class TextCaption < ActiveRecord::Migration
   def up
 
-    change_column :video, :caption, :text
+    change_column :videos, :caption, :text
 
   end
 
