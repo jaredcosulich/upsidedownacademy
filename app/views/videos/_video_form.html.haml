@@ -16,21 +16,22 @@
     $('#upload_form').submit(this.checkForFile);
   })
 
-= form_for :video, :url => @form_info["url"] + "?nexturl=#{url_for(assign_youtube_id_path(:video_id => @video.id, :only_path => false))}", :html => {:enctype => "multipart/form-data", :id => 'upload_form'} do |f|
-  #errMsg{:style => "display: none; color: red;"}
-    You need to specify a file.
-  %input{:id => "file", :type => "file", :name => "file"}
+- unless @form.info.nil?
+  = form_for :video, :url => @form_info["url"] + "?nexturl=#{url_for(assign_youtube_id_path(:video_id => @video.id, :only_path => false))}", :html => {:enctype => "multipart/form-data", :id => 'upload_form'} do |f|
+    #errMsg{:style => "display: none; color: red;"}
+      You need to specify a file.
+    %input{:id => "file", :type => "file", :name => "file"}
 
-  = hidden_field_tag("token", @form_info["token"])
-  = submit_tag("Upload Video", :class => "submit_button")
-  %span.small.uploading_message{:style => "display: none;"}
-    (uploading... this may take a while)
-  %p It may take a little while for the video to upload so please be patient.
+    = hidden_field_tag("token", @form_info["token"])
+    = submit_tag("Upload Video", :class => "submit_button")
+    %span.small.uploading_message{:style => "display: none;"}
+      (uploading... this may take a while)
+    %p It may take a little while for the video to upload so please be patient.
 
-%br
+  %br
 
-= link_to_function("I've already uploaded my video to YouTube.", "$('#video_url').toggle()")
-#video_url{:style => 'display: none;'}
+  = link_to_function("I've already uploaded my video to YouTube.", "$('#video_url').toggle()")
+#video_url{:style => @form.info.nil? ? '' : 'display: none;'}
   = form_for :video, :url => lesson_video_path(@lesson, @video), :method => :put do |f|
     %p
       %b Instructions
