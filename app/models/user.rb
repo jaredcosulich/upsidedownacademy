@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 
 
   def display_name
-    nickname || name
+    nickname.blank? ? name : nickname
   end
 
   def to_param
