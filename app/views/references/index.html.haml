@@ -3,7 +3,7 @@
   %tr
     %th Title
     %th Url
-    %th Comments
+    %th Comment
     %th
     %th
     %th
@@ -11,7 +11,7 @@
     %tr
       %td= reference.title
       %td= reference.url
-      %td= reference.comments
+      %td= reference.comment
       %td= link_to 'Show', lesson_reference_path(@lesson, reference)
       %td= link_to 'Edit', edit_lesson_reference_path(@lesson, reference)
       %td= link_to 'Destroy', lesson_reference_path(@lesson, reference), confirm: 'Are you sure?', method: :delete
