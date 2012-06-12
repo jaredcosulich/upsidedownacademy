@@ -85,7 +85,7 @@
 
   .comments
     %h3 Comments On This Lesson
-    - @lesson.comments.each do |comment|
+    - @lesson.comments.joins(:user).each do |comment|
       .comment
         = simple_format(comment.text)
         .small= "- from #{link_to(comment.user.display_name, profile_path(comment.user))}".html_safe
