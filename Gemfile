@@ -25,6 +25,7 @@ gem 'pg'
 gem 'sluggable'
 gem 'paperclip'
 gem 'aws-s3', '0.6.2', :require => 'aws/s3'
+gem 'unicorn'
 
 gem "airbrake"
 gem "newrelic_rpm"
@@ -39,15 +40,15 @@ gem "newrelic_rpm"
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-  gem 'heroku'
+  # gem 'heroku'
 end
 
 group :test, :development do
   gem 'rspec-rails'
-  gem 'factory_girl_rails'  
 end
 
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'factory_girl_rails'  
 end
