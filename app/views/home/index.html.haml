@@ -97,7 +97,10 @@
               = link_to(lesson.title, lesson_path(lesson))
               .really_small
                 \- by
-                = link_to_unless(lesson.user.nil?, lesson_owner(lesson), profile_path(lesson.user)) rescue nil
+                - begin
+                    = link_to_unless(lesson.user.nil?, lesson_owner(lesson), profile_path(lesson.user))
+                - rescue
+                    Anonymous
           %li= link_to("View all lessons >", lessons_path)
 
       -#
