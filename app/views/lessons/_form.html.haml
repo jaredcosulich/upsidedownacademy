@@ -85,7 +85,7 @@
               - if media.is_a?(Video)
                 - video = media
                 .video_thumbnail
-                  - if video.youtube_id.index('docs.google')
+                  - if video.youtube_id and video.youtube_id.index('docs.google')
                     %div{:style => "float: left; margin-right: 12px;"}
                       != video.google_frame(180, 120)
                   - else
