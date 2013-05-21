@@ -30,19 +30,33 @@
 
   %br
 
-  = link_to_function("I've already uploaded my video to YouTube.", "$('#video_url').toggle()")
+  = link_to_function("I've already uploaded my video to YouTube or Google Drive.", "$('#video_url').toggle()")
 #video_url{:style => @form_info["url"].nil? ? '' : 'display: none;'}
   = form_for :video, :url => lesson_video_path(@lesson, @video), :method => :put do |f|
-    %p
-      %b Instructions
-    %ol
-      %li Go to your videos webpage
-      %li Click the "Share" button
-      %li Copy the selected text
-      %li
-        It should look like:
-        %b http://youtu.be/Oj8DJyr9dNc
-
+    %table{:style => 'margin-top: 12px'}
+      %th YouTube Instructions
+      %th Google Drive Instructions
+      %tr
+        %td
+          %ol
+            %li Go to your videos webpage on YouTube
+            %li Click the "Share" button
+            %li Copy the selected text
+            %li
+              It should look like:
+              %br
+              %b{:style => 'font-size: 12px'} http://youtu.be/Oj8DJyr9dNc
+        %td
+          %ol
+            %li Go to your videos webpage on Google Drive
+            %li Click "Embed This Video" link in the "File" menu.
+            %li Copy the selected text
+            %li
+              It should look like:
+              %br
+              %b{:style => 'font-size: 12px'} 
+                &lt;iframe src="https://docs.google.com/file/d/0B_23GT/preview"&gt;&lt;/iframe&gt;
+            
     %p
       = f.label :youtube_url, "Video URL:"
       = f.text_field :youtube_url

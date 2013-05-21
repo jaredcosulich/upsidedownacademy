@@ -85,11 +85,14 @@
               - if media.is_a?(Video)
                 - video = media
                 .video_thumbnail
-                  - if video.created_at > 30.minutes.ago
-                    %p.small.text_center
-                      It may take up to an hour for YouTube to process your video.
-
-                  = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
+                  - if video.youtube_id.index('docs.google')
+                    %div{:style => "float: left; margin-right: 12px;"}
+                      != video.google_frame(180, 120)
+                  - else
+                    - if video.created_at > 30.minutes.ago
+                      %p.small.text_center
+                        It may take up to an hour for YouTube to process your video.
+                    = link_to(image_tag("http://img.youtube.com/vi/#{video.youtube_id}/default.jpg"), lesson_video_path(@lesson, video), :class => "lightbox")
                   = link_to(video.title, lesson_video_path(@lesson, video), :class => "lightbox")
                   .small= simple_format(truncate(video.caption, :length => 90))
                   .links.small.clear.right
