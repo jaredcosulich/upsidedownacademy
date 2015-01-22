@@ -50,17 +50,17 @@ module Upsidedownacademy
       ::S3_PAPERCLIP_STORAGE_OPTIONS = {
         :storage => :s3,
         :s3_credentials => {
-          development: {
-            access_key_id: ENV['S3_ACCESS_KEY_ID']
-            secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
+          :development => {
+            :access_key_id => ENV['S3_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']
           },
-          staging: {
-            access_key_id: ENV['S3_ACCESS_KEY_ID']
-            secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
+          :staging => {
+            :access_key_id => ENV['S3_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']
           },
-          production: {
-            access_key_id: ENV['S3_ACCESS_KEY_ID']
-            secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
+          :production => {
+            :access_key_id => ENV['S3_ACCESS_KEY_ID'],
+            :secret_access_key => ENV['S3_SECRET_ACCESS_KEY']
           }
         },
         :s3_host_alias => 'photos.upsidedownacademy.org',
