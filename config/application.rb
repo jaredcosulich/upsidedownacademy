@@ -61,8 +61,8 @@ module Upsidedownacademy
           production: {
             access_key_id: ENV['S3_ACCESS_KEY_ID']
             secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
-          },
-        }"#{Rails.root}/config/s3.yml",
+          }
+        },
         :s3_host_alias => 'photos.upsidedownacademy.org',
         :s3_headers => {'Expires' => 1.year.from_now.httpdate},
         :bucket => 'photos.upsidedownacademy.org',
